@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> | Início </title>
+        <link rel="stylesheet" href="css/estilo-geral.css">
+    </head>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <span id="menu-mostrar">&#9776; Menu</span>
+            <nav>
+                <ul>
+                    <li><a href="">pg1</a></li>
+                    <li><a href="">pg2</a></li>
+                    <li><a href="">pg3</a></li>
+                    <li><a href="">pg4</a></li>
+                    <li><a href="">pg5</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="conteudo">
+            <header id="cabecalho-home">
+                <section id="texto-cabecalho-home">
+                    <h1 class="centralizado-alinhado">Amazon Web Services</h1>
+                    <p class="textos-tamanho-1 centralizado-alinhado">A AWS é como um grande centro de ferramentas na nuvem. Em vez de comprar servidores e se preocupar com infraestrutura, você simplesmente usa o que precisa: espaço para guardar arquivos, poder de processamento, bancos de dados, inteligência artificial. Tudo está ali, disponível sob demanda.</p>
+                </section>
+                <section id="container-logo-aws-home">
+                    <img src="imgs/logo/logo aws.webp" id="logo-aws-home" alt="Logo AWS">
+                </section>
+            </header>
+            <section id="textos-home">
+                <section class="bloco-texto-50 justificado">
+                    <p class="textos-tamanho-0 citacao italico centralizado-alinhado">Não perca tempo discutindo como deveria ser um bom homem. <strong>Seja um.</strong></p>
+                    <p class="textos-tamanho-1 citacao-autor centralizado-alinhado">Marco Aurélio</p>
+                    <p class="textos-tamanho-1 margem-grande identado">Marco Aurélio, um dos imperadores mais notáveis de Roma, é frequentemente lembrado por sua filosofia estoica e sua ênfase na ação prática. Ele acreditava que a verdadeira virtude não estava em teorias ou discussões intermináveis, mas em agir de acordo com princípios éticos e morais. Sua vida e escritos refletem a importância de viver de maneira autêntica e de fazer o que é certo, independentemente das circunstâncias externas.</p>
+                    <p class="textos-tamanho-1 margem-grande identado">Assim como Marco Aurélio incentiva a ação prática, a AWS proporciona ferramentas que facilitam colocar ideias em prática. Com seus serviços sob demanda, empresas e desenvolvedores podem testar, criar e escalar projetos rapidamente, sem investir em infraestrutura física. Isso torna o desenvolvimento mais ágil e acessível, permitindo que o foco esteja na execução e inovação, e não nas limitações técnicas ou estruturais.
+                    </p>
+                </section>
+            </section>
+        </section>
+        <script>
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+        </script>
+        <script>
+            const logoAws=document.getElementById('logo-aws-home');
+            let rotacao=false;
+            logoAws.addEventListener('click',()=>{
+                rotacao=!rotacao;
+                logoAws.style.transition = '0.3s';
+                logoAws.style.transform = rotacao ? 'rotate(15deg)' : 'rotate(0deg)';
+                logoAws.style.borderRadius = rotacao ? '80px' : '8px';
+            });
+        </script>
+    </body>
+</html>
