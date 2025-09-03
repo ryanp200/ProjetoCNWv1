@@ -44,7 +44,7 @@ body {
     font-weight: 500;
     font-size: 1.3em;
     box-shadow: none;
-    transition: 0.2s;
+    transition: background 0.2s;
     display: inline-block;
     transition: 0.3s ease;
 }
@@ -113,12 +113,20 @@ body {
 h1{
     margin-bottom: 16px;
     font-size: 2.5em;
-    color: #ddd;
+    color: #fff;
 }
 
+.h2_paragrafo{
+    font-size: 1.5em;
+    margin-bottom:25px;
+    margin-top: 15px;
+}
+h3 {
+    margin-top: 15px;
+}
 p{
     line-height: 1.6;
-    color: #ccc;
+    color: #ddd;
 }
 .justificado{
     text-align: justify;
@@ -128,6 +136,9 @@ p{
 }
 .direita-alinhado{
     text-align: right;
+}
+.esquerda-alinhado{
+    text-align: left;
 }
 .centralizado-alinhado{
     text-align: center;
@@ -211,6 +222,8 @@ p{
     margin-bottom: 48px;
 }
 
+
+
 /*imagens*/
 #container-logo-aws-home{
     display: flex;
@@ -226,12 +239,61 @@ p{
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     margin-top: 20px;
 }
+
+.aws_logo_alinhar{
+    width: 400px;
+    position: absolute;
+    left: 55%;
+    top: 35%;
+    transform: rotate(-4deg);
+}
+
+#logo-azul{
+    width: 400px;
+    top: 95%;
+}
+
+#aws_prod{
+    width: 25%;
+    border-radius: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    top: 150%;
+    transform: rotate(2deg);
+}
+
+
 /*animações*/
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px);}
     to { opacity: 1; transform: translateY(0);}
 }
 
+/*Lista de definições*/
+dl {
+    margin: 40px 0;
+    padding: 0 0 0 20px;
+    border-left: 4px solid #ddd;
+    max-width: 800px;;
+}
+dt {
+    font-size: 22px;
+    font-weight: 1000;
+    color: #fff;
+
+}
+dd {
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 16px;
+    color: #ddd;
+}
+
+/*Lista não ordenada*/
+ul{
+    margin: 10px 0 0 30px;
+    line-height: 30px;
+    color: #ddd;
+}
 
 /*outras providências*/
 
@@ -253,4 +315,24 @@ p{
     flex-direction: column;
     gap: 16px;
     width: 100%;
+}
+
+.animacao-palavra {
+  animation: color-animation 5s linear infinite;
+}
+
+.mudar-cor {
+  --color-1: #ff9900;
+  --color-2: #aa2e00;
+  --color-3: #f5f5f5;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
 }
