@@ -109,6 +109,31 @@ body {
     animation: fadeIn 0.5s ease-in-out;
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #090d15;
+    box-shadow: 0 -4px 8px #00000017;
+    padding: 24px 60px;
+    text-align: center;
+    height: 7em;
+    width: 100%;
+    margin-top: 100px;
+}
+footer span{
+    color: #aaa;
+    font-size: 1em;
+}
+footer img{
+    width: 100px;
+    height: auto;
+    margin-left: 12px;
+    filter: brightness(0) invert(1);
+    vertical-align: middle;
+    transition: 0.3s ease;
+}
+
 /* textos */
 h1{
     margin-bottom: 16px;
