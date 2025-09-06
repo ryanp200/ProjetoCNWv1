@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Amazon RDS </title>
+        <link rel="stylesheet" href="../css/estilo-geral.css">
+    </head>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <span id="menu-mostrar">&#9776; Menu</span>
+            <nav>
+                <ul>
+                    <li><a href="">pg1</a></li>
+                    <li><a href="">pg2</a></li>
+                    <li><a href="ims.html">IAM (Identify and Access Management)</a></li>
+                    <li><a href="amazon_rds.html">Amazon RDS</a></li>
+                    <li><a href="Empresas_que_usam_AWS.html">Empresas que usam AWS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="conteudo">
+            <section align="center">
+            <h1 class="centralizado-alinhado"> IAM (Identify and Access Management)</h1>
+            </section>
+            <section class="meio">
+                <section class="bloco-texto-75 justificado">
+                    <p class="textos-tamanho-1 margem-grande identado">O AWS Identity and Access Management (IAM) é um serviço da Web que ajuda você a controlar o acesso aos recursos da AWS de forma segura, podendo controlar os acessos que os usuários podem fazer na AWS, tendo que utilizar o login do usuário para ter permissão de modificar ou usar algum recurso.
+                    <p class="textos-tamanho-1 margem-grande identado">Depois que certo usuário é configurado no IAM, ele usa suas credenciais de login para se autenticar na AWS. Logo em seguida é feita uma solicitação de autorização para o servidor, onde, caso você esteja na lista de usuários autorizados, o seu acesso é concedido.
+                    </p>
+                </section>
+            </section>
+            <img src="../imgs/logo/iam.png" id="iam_imagem" alt="Identity and Access Management (IAM)">
+        </section>
+        
+        <hr>
+            <section class="conteudo">
+                <p class="textos-tamanho-1 centralizado-alinhado"> SIMULAÇÃO - Usuarios permitidos - Pedro, Miguel, Jeferson</p>
+                
+                <table id="tabela_iam" >
+                 <tr>   
+                    <td>
+                        <p class="textos-tamanho-1 centralizado-alinhado">Digite seu usuário para tentar acessar a AWS:</p>
+                        
+                    </td>
+                    
+                 </tr>
+                <tr>   
+                    <td>
+                        <input type="text" id="username_iam" id="input_iam">
+                 </td>
+                 </tr>
+                
+                <tr>   
+                    <td>
+                        <button onclick="login()" class="botao_matheus" id="botao_iam">Entrar</button>
+                     </td>
+                 </tr>
+                  <tr>   
+                    <td>
+                    <p id="result" class="textos-tamanho-1"></p>
+                    </td>
+                 </tr>
+                </section>
+        <section>
+               
+        <script>
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+
+
+            const autorizados = ["pedro", "miguel", "jeferson"];
+
+            function login() {
+              const user = document.getElementById("username_iam").value.toLowerCase();
+              const result = document.getElementById("result");
+
+                if (autorizados.includes(user)) {
+                result.innerHTML = '<p class="textos-tamanho-1">Bem vindo '+user+' seu acesso foi permitido';
+                result.className = "success";
+                } else {
+                result.innerHTML = '<p class="textos-tamanho-1">Usuario não encontrado, acesso negado';
+                result.className = "error";
+                }
+                            }
+            
+        </script>
+       
+    </body>
+</html>

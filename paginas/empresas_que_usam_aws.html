@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,40 +13,44 @@
                 <ul>
                     <li><a href="">pg1</a></li>
                     <li><a href="">pg2</a></li>
-                    <li><a href="">pg3</a></li>
-                    <li><a href="">pg4</a></li>
-                    <li><a href="Empresas_que_usam_AWS.html">pg18</a></li>
+                    <li><a href="ims.html">IAM (Identify and Access Management)</a></li>
+                    <li><a href="amazon_rds.html">Amazon RDS</a></li>
+                    <li><a href="Empresas_que_usam_AWS.html">Empresas que usam AWS</a></li>
                 </ul>
             </nav>
         </header>
         <section class="conteudo">
             <section>
-            <h1 class="centralizado-alinhado"> Empresas que usam AWS</h1>
+            <p id="titulo" class="textos-tamanho-0 centralizado-alinhado"><b> Empresas que usam AWS</b></p>
             </section>
             <section class="meio">
                 <section class="bloco-texto-75 justificado">
                     <p class="textos-tamanho-1 margem-grande identado">Com as diversas vantagens que o AWS possui é claro que diversas empresas, organizações, e diversos outros grupos usariam essa ferramenta para seus trabalhos.
-                    <p class="textos-tamanho-1 margem-grande identado">Mais de 7.500 agências governamentais usam AWS nos Estados Unidos ajudando em diversas areas diferentes como a area politica e comercial com uma maior segurança, conformidade e confiabilidade. Fornecendo recursos comerciais de nuvem em todos os níveis de classificação tendo assim uma maior flexibilidade para qualquer função.
+                    <p class="textos-tamanho-1 margem-grande identado">Mais de 7.500 agências governamentais usam AWS nos Estados Unidos ajudando em diversas áreas diferentes como a área política e comercial com uma maior segurança, conformidade e confiabilidade. Fornecendo recursos comerciais de nuvem em todos os níveis de classificação tendo assim uma maior flexibilidade para qualquer função.
                     </p>
                    
                 </section>
             </section>
         </section>
-        <header id="imagem_com_texto_do_lado_matheus">
-                <section id="texto-com_imagem_do_lado-matheus">
-                    <p class="textos-tamanho-1 centralizado-alinhado">Diversas corporações de alto porte são clientes do AWS como a grande impresa do iFood que o utiliza para padronizar e faciliar implementações que fazem e também otimizam a experiencia do cliente perfonmando dao pedido até a entrega. Outra grande corporação que utiliza da AWS para uma melhor experiencia é a Netflix que utiliza para uma melhor computação, infraestrutura e uma maior capacidade de dados assim podendo oferecer um maior entretenimento para seus clientes.</p>
+        <section class="imagem_com_texto_do_lado_matheus">
+                <section class="texto-com_imagem_do_lado-matheus">
+                    <p class="textos-tamanho-1 centralizado-alinhado">Diversas corporações de alto porte são clientes do AWS como a grande empresa do iFood que o utiliza para padronizar e facilitar implementações que fazem e também otimizam a experiência do cliente performando do pedido até a entrega. Outra grande corporação que utiliza da AWS para uma melhor experiência é a Netflix que utiliza para uma melhor computação, infraestrutura e uma maior capacidade de dados assim podendo oferecer um maior entretenimento para seus clientes.</p>
                 </section>
-                <section id="container-logo-aws-home">
-                    <img src="../imgs/logo/empresas.png" id="logo-empresas" alt="empresas que usam AWS">
+                <section class="container_logo_empresas">
+                    <img src="../imgs/logo/empresas.png" class="logo_empresas" alt="empresas que usam AWS">
                 </section>
-            </header>
+        </section>
         
           <section class="meio">
                 <section class="bloco-texto-75 justificado">
-         <p class="textos-tamanho-1 margem-grande identado">Inclusive a AIRBNB utiliza startpus da AWS em seus serviços, onde ela gerencia sua grande infraestrutura, deixando a empresa dedique seus recursos a outras atividades.
+         <p class="textos-tamanho-1 margem-grande identado">Inclusive a Airbnb utiliza startups da AWS em seus serviços, onde ela gerencia sua grande infraestrutura, deixando a empresa dedicar seus recursos a outras atividades.
                     </p>
           </section>
          </section>
+</section>
+
+
+
         <script>
             const menuNav = document.querySelector('.barranav');
             const menuMostrar = document.getElementById('menu-mostrar');
@@ -59,6 +63,20 @@
                     menuNav.classList.remove('open');
                 }
             });
+
+               const titulo = document.getElementById("titulo");
+
+              titulo.addEventListener("mouseenter", () => {
+              titulo.style.transform = "scale(1.2)";
+              titulo.style.transition = "transform 0.3s ease";
+              titulo.style.color = "#4f46e5";
+                });
+
+              titulo.addEventListener("mouseleave", () => {
+              titulo.style.transform = "scale(1)";
+              titulo.style.color = "#fff";
+                });
+            
         </script>
        
     </body>

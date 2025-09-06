@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Amazon RDS </title>
+        <link rel="stylesheet" href="../css/estilo-geral.css">
+    </head>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <span id="menu-mostrar">&#9776; Menu</span>
+            <nav>
+                <ul>
+                    <li><a href="">pg1</a></li>
+                    <li><a href="">pg2</a></li>
+                    <li><a href="ims.html">IAM (Identify and Access Management)</a></li>
+                    <li><a href="amazon_rds.html">Amazon RDS</a></li>
+                    <li><a href="Empresas_que_usam_AWS.html">Empresas que usam AWS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="conteudo">
+            <section align="center">
+            <h1 class="centralizado-alinhado"> Amazon RDS</h1>
+            <img src="../imgs/logo/amazon_RDS.png" class="imagem_padrao_mp centralizado-alinhado" alt="Amazon RDS">
+            </section>
+            <section class="meio">
+                <section class="bloco-texto-75 justificado">
+                    <p class="textos-tamanho-1 margem-grande identado">É um serviço de banco de dados relacional que facilita diversas atividades na nuvem AWS como a configuração, a sua operação e sua escalabilidade. Fornecendo capacidade econômica e redimensionável para um banco de dados relacional padrão do setor onde também administra tarefas comuns do banco de dados.
+                    <p class="textos-tamanho-1 margem-grande identado">Esse serviço automatiza as tarefas genéricas oferecendo flexibilidade para você poder personalizá-los a partir de sua necessidade.
+                    </p>
+                   
+                </section>
+            </section>
+        </section>
+
+        <section>
+                <section>
+                    <button onclick="vantag()"id="vantagem" class="botao_matheus"><p class="textos-tamanho-1 ">Vantagem</p></button>
+                    
+                    
+                   
+                </section>
+        </section>
+          <section>
+                <section>
+                    
+                    <button onclick="desvantag()" id="desvantagem" class="botao_matheus"><p class="textos-tamanho-1 ">Desvantagem</p></button>
+                    
+                   
+                </section>
+        </section>
+         
+        <script>
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+
+           function vantag() {
+            document.getElementById('vantagem').innerHTML = `
+            
+            <ul class="lista_vantagens_desvantagens">
+            
+                <p class="textos-tamanho-0 centralizado-alinhado "> <b>Vantagem </b></p>    
+                <li>
+                    <p class="textos-tamanho-1 centralizado-alinhado ">Elimina tarefas tediosas assim podendo dar mais liberdade para você focar em outras partes
+        
+                   </p>
+                </li>
+         
+                <li>
+                    <p class="textos-tamanho-1 centralizado-alinhado ">
+                        Ele gerencia backups, patches de software, detecção automática de falhas e recuperação.
+
+                    </p>
+                </li>
+         
+                <li>
+                    <p class="textos-tamanho-1 centralizado-alinhado ">
+                        É possível ter alta disponibilidade com uma instância de banco de dados primária e uma instância de banco de dados secundária síncrona que pode ser usada para failover em caso de problemas.
+
+                    </p>
+                </li>
+       
+         </ul>
+  `;
+}
+
+        function desvantag() {
+            document.getElementById('desvantagem').innerHTML = `
+            
+            <ul class="lista_vantagens_desvantagens">
+                <p class="textos-tamanho-0 centralizado-alinhado "><b> Desvantagem </b></p>    
+                <li>
+                    <p class="textos-tamanho-1 centralizado-alinhado ">
+                    Falta de acesso ao root por conta de ser um serviço gerenciado você não pode acessar o servidor que executa o RDS restringindo alguns acessos.
+
+                    </p>
+                </li>
+                <li>
+                    <p class="textos-tamanho-1 centralizado-alinhado ">
+           
+                       Tempo de inatividade pois os sistemas ficam offline para procedimentos de aplicação de patches e escalonamento, variando o tempo de inatividade.
+
+                    </p>
+                </li>
+       
+         </ul>
+        `;
+    }
+            
+        </script>
+       
+    </body>
+</html>
