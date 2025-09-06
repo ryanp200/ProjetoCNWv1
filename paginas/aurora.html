@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> INFO | microsoft aurora</title>
+    <link rel="stylesheet" href="../css/estilo-geral.css">
+    <link rel="icon" type="image/png" href="../imgs/logo/info-logo-simbolo.png">
+</head>
+
+<body>
+    <header class="barranav" id="menu-navegacao">
+        <span id="menu-mostrar">&#9776; Menu</span>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="/paginas/computacao-nuvem.html"">Definição</a></li>
+                <li><a href=" /paginas/historia_aws.html">História</a></li>
+                <li><a href="">pg4</a></li>
+                <li><a href="">pg5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="conteudo">
+        <section>
+            <h1 class="centralizado-alinhado pulsar">Amazon Aurora</h1>
+        </section>
+        <section class="bloco-texto-50">
+            <h2 class="h2_paragrafo">O que é</h2>
+            <p class="textos-tamanho-3 quebra_linha">
+                O Amazon aurora é ume mecanismo de banco de dados relacinal gerenciado
+                que é compativel com Mysql e PostgreSQL sendo que as ferramentas e aplicações
+                utilizadas no mysql e PostgreSQL podem ser usadas com o Aurora. O aurora oferecce até cinco
+                vezes a do MySQL e até três vezes a taxa de processamento do PostgreSQL, sem exigir alterações na
+                maioria das aplicações existentes.
+            </p>
+            <figure>
+                <img src="../imgs/aurora/aurora.webp" alt="auroa" id="aurora-logo" class="posicao-absoluta">
+            </figure>
+        </section>
+        <section>
+            <h2 class="h2_paragrafo margin-top-titulo ">Beneficios do microsoft aurora</h2>
+        </section>
+       
+            <section class="bloco-texto-30 quadrado posicao-absoluta alinhar-bloco-1" >
+                <h2>Alta performance</h2>
+                <p>
+                    A aurora possui aplicações de alta persormace e worloads criticas possuindo total
+                    compatibolidade com o mysql e o PostgreSQL
+                </p>
+            </section>
+            <section class="bloco-texto-30 quadrado">
+                <h2>Alta disponibilidade</h2>
+                <p>
+                    É possivel construir as aplicações com Mult-AZ apoiado por um SLA de 99.99% de tempo de atividade e
+                    replicação global possuindo um recuperação de menos de um minuto para desastres entre regiçoes
+
+                </p>
+
+            </section>
+            <section class="bloco-texto-30 quadrado posicao-absoluta alinhar-bloco-1">
+                <h2>Fácil de migrar</h2>
+                <p>
+                    Migre os bancos de dados mysql ou PostgreSQL para o aurora por meio das ferramentas
+                    padrões ou por aplicações do SQL Server herdadas com o Babelshif for AUrora PostgreSQL com minimas
+                    de código
+                </p>
+            </section>
+            <section class="bloco-texto-30 quadrado">
+                <h2>Econômico</h2>
+                <p>
+                    Alem de melhorar a produtividade o aurora também raduz o custo total da propriedade de um banco de
+                    dados
+                    totalmente gerenciado incluindo inovações como a tecnologia sem servidor, assim se concentrando nas
+                    aplicações
+                </p>
+
+            </section>
+
+        </section>
+    </section>
+
+
+       </section>
+            <footer>
+            <section>
+                <span>Desenvolvido por</span>
+                <img src="../imgs/logo/info-logo.png" alt="Logo Info">
+            </section>
+            <section>
+                <span><a href="./paginas/referencias.html">Referências</a></span>
+            </section>
+        </footer>
+    <script>
+        const menuNav = document.querySelector('.barranav');
+        const menuMostrar = document.getElementById('menu-mostrar');
+        menuMostrar.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuNav.classList.toggle('open');
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuNav.contains(e.target)) {
+                menuNav.classList.remove('open');
+            }
+        });
+        const aurora = document.getElementById('aurora-logo');
+        let zoom = false;
+        let hue = false;
+        let shadow = false;
+        aurora.addEventListener('click', () => {
+            zoom = !zoom;
+            hue = !hue;
+            shadow = !shadow
+            aurora.style.transition = '0.3s';
+            aurora.style.transform = zoom ? 'scale(1.1)' : 'scale(1)';
+            aurora.style.filter = hue ? 'hue-rotate(25deg)' : 'hue-rotate(0deg)';
+            aurora.style.boxShadow = shadow ? '0 4px 29px #432558, 0 20px 51px #0051ddb3' : 'none';
+
+        });
+    </script>
+
+</body>
+
+</html>
