@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 4: Regiões de disponibilidades da AWS</title>
+    <link rel="stylesheet" href="../css/estilo-geral.css">
+</head>
+<body>
+<header class="barranav" id="menu-navegacao">
+    <span id="menu-mostrar">&#9776; Menu</span>
+    <nav>
+        <ul>
+            <li><a href="">pg1</a></li>
+            <li><a href="">pg2</a></li>
+            <li><a href="">pg3</a></li>
+            <li><a href="">pg4</a></li>
+            <li><a href="">pg5</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section class="conteudo">
+    <h1 class="centralizado-alinhado" id="digitar"></h1>
+        <p class="textos-tamanho-1 centralizado-alinhado">As Regiões de Disponibilidade da AWS são grupos de centros de dados geograficamente localizados. Dentro de cada região geografica da AWS, a AWS tem múltiplas Zonas de Disponibilidade, que são essencialmente data centers independentes.</p>
+</section>
+
+<section class="conteudoo2">   
+        <p class="textos-tamanho-1 centralizado-alinhado"><b>Quais são e aonde estão?</b></p>
+            <img src="../imgs/mapa/c72a7ac57ffc2469619e66dc74dfea24_kix.q8rtdmc6bgiq.jpeg" id="mapa-dos-servicos-AWS" alt="mapa-dos-servicos-AWS">
+        <p class="textos-tamanho-1 centralizado-alinhado">Ate o momento, a AWS possui 37 Regiões Geográficas e 117 Zonas de Disponibilidade. Existem planos para lançarem mais zonas de disponibilidades. Segue a imagem acima.</p>
+</section>
+
+<script>
+let texto = "Oque são Regiões de Disponibilidade?";
+let i = 0;
+function escrever() {
+  if (i < texto.length) {
+    document.getElementById("digitar").innerHTML += texto.charAt(i);
+    i++;
+    setTimeout(escrever, 100);
+  }
+}
+escrever();
+</script>
+
+<script>
+    const menuNav = document.querySelector('.barranav');
+    const menuMostrar = document.getElementById('menu-mostrar');
+    menuMostrar.addEventListener('click', (e) => {
+        e.stopPropagation();
+        menuNav.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+        if (!menuNav.contains(e.target)) {
+            menuNav.classList.remove('open');
+        }
+    });
+</script>
+
+</body>
+</html>
+
+</link>  
+</body>
+</html>

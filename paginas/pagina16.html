@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 16: Monitoramento com o Cloudwatch</title>
+    <link rel="stylesheet" href="../css/estilo-geral.css">
+</head>
+<body>
+<header class="barranav" id="menu-navegacao">
+    <span id="menu-mostrar">&#9776; Menu</span>
+    <nav>
+        <ul>
+            <li><a href="">pg1</a></li>
+            <li><a href="">pg2</a></li>
+            <li><a href="">pg3</a></li>
+            <li><a href="">pg4</a></li>
+            <li><a href="">pg5</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="conteudo">
+    <p>Oque é e o que significa... <h1>"Monitoramento com o Cloudwatch"</h1></p>
+        <p>O Amazon CloudWatch é um serviço da AWS que permite monitorar recursos e aplicações em tempo real.</p>
+        <p>Altamente recomendado para desenvolvedores que trabalham com o desenvolvimento em nuvem, ele coleta e analisa métricas, logs e eventos, ajudando a identificar problemas e otimizar o desempenho da infraestrutura na nuvem.</p>
+<img src="../imgs/cloudwatch/Captura de tela 2025-09-04 190331.png" id="cloudwatch-resumo-aplicabilidade" alt="cloudwatch-resumo-aplicabilidade" class="imagem-personalizada1">
+<img src="../imgs/cloudwatch/Amazon-Cloudwatch.png" id="cloudwatch-amazon" alt="cloudwatch-amazon" class="imagem-personalizada2">
+</section>
+<section class="conteudoo2">
+    <p class="textos-tamanho-3"><b>Porque eu deveria usa-lo?</b></p>
+    <p>Entre as suas principais funcionalidades, estão os Dashboards, que nada mais são que paineis que te ajudam a visualizar o seu ambiente de desenvolvimento em tempo real!</p>
+    <p>Existem tambem os alarmes, que, como o nome ja sugere, avisam e alertam quando ha algo fora do esperado. (Por exemplo, Um alarme que avise quando o uso da CPU passe de 80%).</p>
+    <p>Alem dessas principais funcionalidades, tambem é possivel contar com os recursos de Logs, que armazena e analisa registros de aplicações e sistemas, e os Eventos, qie detectam mudanças na infraestrutura e automatizam respostas (Por exemplo: reiniciar instâncias automaticamente).</p>
+<img src="../imgs/cloudwatch/Captura de tela 2025-09-04 190349.png" id="cloudwatch-aplicabilidade-resumo" alt="cloudwatch-aplicabilidade-resumo" class="imagem-personalizada1">
+</section>
+<section class="conteudo">
+<p>Com essa coleção de ferramentas, trabalhar utilizando o CloudWatch da AWS disponibiliza uma miriade de vantagens, como o monitoramento em tempo real com o Dashboard, ajuda na tomada de decisões rápidas para corrigir falhas, automação de respostas a problemas e muito mais!</p>
+</section>
+<section class="conteudo">
+    <p class="centralizado-alinhado"><button onclick="mostrarTexto()" class="botao-miguelo">Clica em mim!</button></p>
+</section>
+<section class="conteudoo2 textoOculto" id="textoOculto16">
+    <p class="textos-tamanho-1"><b>Curiosidades!</b></p>
+    <p><b>O que posso usar para acessar o CloudWatch?</b></p>
+    <p>O Amazon CloudWatch pode ser acessado por meio de API, interface da linha de comando, AWS SDKs e Console de Gerenciamento da AWS.
+    <br>
+    <br>
+    </p>
+    <p><b>Quais sistemas operacionais são compatíveis com o Amazon CloudWatch?</b></p>
+    <p>O Amazon CloudWatch recebe e fornece métricas para todas as instâncias do Amazon EC2 e deve funcionar com qualquer sistema operacional compatível no momento com o serviço Amazon EC2.
+    <br>
+    <br>    
+    </p>
+    <p><b>O que é observabilidade entre contas no CloudWatch?</b></p>
+    <p>No CloudWatch, a observabilidade entre contas permite que você monitore e solucione problemas de aplicações distribuídas entre várias contas em uma determinada região. Com a observabilidade entre contas, você pode pesquisar, visualizar e analisar de forma integrada métricas, logs e rastreamentos sem se preocupar com os limites das contas.</p>
+</section>
+<script>
+    function mostrarTexto(){
+        let textoescondido = document.getElementById("textoOculto16");
+
+        if (textoescondido.style.display === "none" || textoescondido.style.display === "") {
+            textoescondido.style.display = "block"; 
+        } else {
+            textoescondido.style.display = "none";  
+        }
+    }
+</script>
+
+<!-- Colocar Javascript interno e uma animação na pagina -->
+
+<script>
+    const menuNav = document.querySelector('.barranav');
+    const menuMostrar = document.getElementById('menu-mostrar');
+    menuMostrar.addEventListener('click', (e) => {
+        e.stopPropagation();
+        menuNav.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+        if (!menuNav.contains(e.target)) {
+            menuNav.classList.remove('open');
+        }
+    });
+</script>
+
+</body>
+</html>
+
+</link>  
+</body>
+</html>
