@@ -121,6 +121,10 @@ h1{
     margin-bottom:25px;
     margin-top: 15px;
 }
+h2 {
+    margin-top: 15px;
+}
+
 h3 {
     margin-top: 15px;
 }
@@ -225,6 +229,7 @@ p{
 
 
 /*imagens*/
+
 #container-logo-aws-home{
     display: flex;
     justify-content: center;
@@ -261,6 +266,14 @@ p{
     transform: rotate(2deg);
 }
 
+.imagens {
+    width: 90%;
+    border-radius: 10px;
+    rotate: 4deg;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 450px;
+    justify-self: center;
+}
 
 /*animações*/
 @keyframes fadeIn {
@@ -291,7 +304,7 @@ dd {
 /*Lista não ordenada*/
 ul{
     margin: 10px 0 0 30px;
-    line-height: 30px;
+    line-height: 25px;
     color: #ddd;
 }
 
@@ -335,4 +348,16 @@ ul{
   66%   {color: var(--color-3)}
   99%   {color: var(--color-3)}
   100%  {color: var(--color-1)}
+}
+
+.layout-colunas > h1 {
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.layout-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
 }
