@@ -56,11 +56,9 @@ body {
     align-items: center;
     gap: 20px;
 }
-
 .barranav.open nav {
     display: flex;
 }
-
 .barranav nav ul {
     list-style: none;
     margin: 0;
@@ -69,14 +67,14 @@ body {
     flex-direction: column;
     gap: 2px;
 }
-
 .barranav nav ul li {
     margin: 0;
     padding: 0;
     transition: 0.3s ease;
 }
-
 .barranav nav ul li a {
+    cursor: pointer;
+    user-select: none;
     display: block;
     padding: 12px 20px;
     text-decoration: none;
@@ -85,14 +83,12 @@ body {
     font-weight: 500;
     transition: background 0.18s, color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
-
 .barranav nav ul li a:hover {
     background: #56647a;
     color: #fff;
     transform: translateY(-1px);
     opacity: 0.8;
 }
-
 .barranav .home-nav, .barranav #menu-mostrar{
     cursor: pointer;
     width: 40px;
@@ -103,11 +99,9 @@ body {
     margin-bottom: 4px;
     transform: rotate(0deg);
 }
-
 .barranav .home-nav:hover, .barranav #menu-mostrar:hover{
     animation: tremerHome forwards 0.4s ease-in-out;
 }
-
 .barranav .nav-logo-info{
     width: 100px;
     height: auto;
@@ -118,6 +112,41 @@ body {
 .barranav .nav-logo-info:hover{
     filter: brightness(0) invert(0.8);
     transform: scale(1.03);
+}
+.barranav nav ul li.dropdown {
+    position: relative;
+}
+.barranav .dropdown-menu{
+    background: #1e293b;
+    z-index: 15;
+}
+.barranav nav ul li.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 200px;
+    border-radius: 6px;
+    padding: 8px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    flex-direction: column;
+    transition: 0.3s ease;
+}
+.barranav nav ul li.dropdown .dropdown-menu li a {
+    padding: 10px 20px;
+    display: block;
+    font-size: 0.95em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.barranav nav ul li.dropdown .dropdown-menu li a:hover {
+    background: #56647a;
+    color: #fff;
+}
+.barranav nav ul li.dropdown.aberto .dropdown-menu {
+    display: flex;
+    animation: fadeIn 0.3s forwards;
+    flex-direction: column;
 }
 
 .conteudo {
@@ -296,6 +325,15 @@ p{
     100%{transform:rotate(0deg);}
 }
 
+@keyframes tremerHover{
+    0%{transform: scale(1) rotate(0deg); }
+    20%{transform: scale(1.01) rotate(1.5deg); }
+    40%{transform: scale(1.01) rotate(-1.5deg); }
+    60%{transform: scale(1.01) rotate(1deg); }
+    80%{transform: scale(1.01) rotate(-1deg); }
+    100%{transform: scale(1.01) rotate(0.5deg); }
+}
+
 /*outras providências*/
 
 #cabecalho-home{
@@ -369,4 +407,56 @@ p{
 #logo-info-sobre{
     width: 530px;
     filter: brightness(0) invert(0.9);
+}
+
+.conteudo-dynamodb {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    padding: 80px 60px;
+}
+.cabecalho-dynamodb h1 {
+    margin: 50px 0;
+    font-size: 3.5em;
+}
+.logo-dynamodb {
+    display: block;
+    margin: 20px auto;
+    max-width: 350px;
+}
+.logo-dynamodb:hover {
+    animation: tremerHover linear 0.4s infinite;
+}
+.card-dynamodb {
+    background: rgba(255,255,255,0.05);
+    padding: 32px;
+    margin-bottom: 40px;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.card-dynamodb:hover {
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-4px);
+}
+.destaque-dynamodb {
+    border-left: 6px solid #9fb0cc;
+    background: rgba(159,176,204,0.08);
+}
+.lista-dynamodb {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+.lista-dynamodb li {
+    background: rgba(255,255,255,0.04);
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: background 0.3s ease;
+}
+.lista-dynamodb li:hover {
+    background: rgba(255,255,255,0.1);
 }
