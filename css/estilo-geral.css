@@ -109,11 +109,56 @@ body {
     animation: fadeIn 0.5s ease-in-out;
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    background-color: #090d15;
+    box-shadow: 0 -4px 8px #00000017;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    height: 7em;
+    width: 100%;
+}
+footer span{
+    color: #aaa;
+    font-size: 1em;
+}
+footer img{
+    width: 75px;
+    height: auto;
+    margin-left: 12px;
+    filter: brightness(0) invert(1);
+    vertical-align: middle;
+    transition: 0.3s ease;
+}
+footer a{
+    text-decoration: none;
+    color: #787878;
+    font-size: 1em;
+    transition: 0.3s ease;
+}
+footer a:hover{
+    color: #ddd;
+}
+
+
 /* textos */
 h1{
     margin-bottom: 16px;
     font-size: 2.5em;
     color: #ddd;
+}
+
+.h2_paragrafo{
+    font-size: 1.5em;
+    margin-bottom:25px;
+    margin-top: 15px;
+
 }
 
 p{
@@ -153,7 +198,9 @@ p{
 .bloco-texto-50{
     width: 50%;
 }
-
+.bloco-texto-30{
+    width: 30%;
+  
 .bloco-texto-75{
     width: 75%;
 }
@@ -215,6 +262,39 @@ p{
     margin-bottom: 48px;
 }
 
+.sombra-aws {
+    text-shadow: 1px 2px 3px #d3aaaa;
+}
+
+.posicao-absoluta {
+    position: absolute;
+}
+
+#texto-rsd {
+   top: 35%;
+   left: 30%;
+}
+
+#texto-rsd-2 {
+    top: 90%;
+    left: 30%;
+}
+
+#margin-top-beneficios{
+    margin-top: 56px;
+}
+
+.span-bold {
+    font-weight:700;
+    color: #fff;
+}
+
+.margin-top-titulo {
+    margin-top: 10%;
+}
+
+
+
 /*imagens*/
 #container-logo-aws-home{
     display: flex;
@@ -231,10 +311,130 @@ p{
     margin-top: 20px;
 }
 
+.aws_logo_alinhar{
+    width: 400px;
+    position: absolute;
+    left: 55%;
+    top: 35%;
+    transform: rotate(-4deg);
+}
+
+#logo-azul{
+    width: 400px;
+    top: 95%;
+}
+
+#aws_prod{
+    width: 25%;
+    border-radius: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    top: 150%;
+    transform: rotate(2deg);
+}
+
+
+#img-rsd {
+    width: 25%;
+    margin-top: 20%;
+    border-radius: 10px;
+    transform: perspective(400px) rotateY(10deg);
+    box-shadow: 0 4px 12px #b650ffe7, 0 8px 24px #5b03ffb3, 0 16px 48px #6a00ff99;
+    height: 210px;
+    transition-delay:0.1s;
+    transition: all 0.3s ease;
+
+
+}
+
+#oracle-rsd {
+    width: 25%;
+    margin-top: 15%;
+    border-radius: 20px;
+    transform: perspective(400px) rotateY(10deg);
+    box-shadow: 0 4px 25px #ff2407, 0 8px 25px #f9f931, 1px 25px 34px #f236ba99;
+    height: 210px;
+    transition: all 0.3s ease;
+    transition-delay:0.1s;
+}
+
+#img-rsd:hover {
+    transform:translate3d(5px, -8px, 15px) scale(1.05);
+    box-shadow: 0 4px 12px #477eff, 0 8px 24px #0051ffb3, 0 16px 48px #b70aba99, 0 19px 28px #62ff0095;
+    border-radius: 10%;
+    filter: contrast(110%);
+}
+
+#oracle-rsd:hover {
+    transform:translate3d(5px, -8px, 15px) scale(1.05);
+    box-shadow: 0 4px 25px #f8f1f0, 0 8px 25px #49782d, 1px 25px 34px #f236ba99, 0 19px 48px #04e2ff77;
+    filter:hue-rotate(14deg);
+    
+
+}
+
+
+#aurora-logo {
+  width: 450px;
+  top: 35%;
+  right: 9%;
+  border-radius:45px;
+  cursor: pointer;
+}
+
+
+
+
 /*animações*/
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px);}
     to { opacity: 1; transform: translateY(0);}
+}
+
+
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-3)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-3)}
+  66%   {color: var(--color-2)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+@keyframes color-animation-oracle {
+  99%    {color: var(--color-oracle1)}
+  99%   {color: var(--color-oracle2)}
+  99%   {color: var(--color-oracle3)}
+  99%   {color: var(--color-oracle2)}
+  99%   {color: var(--color-oracle3)}
+  99%   {color: var(--color-oracle1)}
+  100%  {color: var(--color-oracle2)}
+}
+
+@keyframes pulsar {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+
+}
+
+
+/*Lista de definições*/
+dl {
+    margin: 40px 0;
+    padding: 0 0 0 20px;
+    border-left: 4px solid #ddd;
+    max-width: 800px;
+}
+dt {
+    font-size: 22px;
+    font-weight: 1000;
+}
+dd {
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 16px;
 }
 
 
@@ -258,6 +458,48 @@ p{
     flex-direction: column;
     gap: 16px;
     width: 100%;
+}
+
+.animacao-palavra {
+  animation: color-animation 7s linear infinite;
+}
+
+.animacao-palavra-oracle {
+  animation: color-animation-oracle 7s linear infinite;
+}
+
+.pulsar {
+  animation: pulsar 2s infinite;
+}
+
+.mudar-cor {
+  --color-1: #ff9900;
+  --color-2: #aa2e00;   
+  --color-3: #f5f5f5;
+}
+
+.mudar-oracle{
+  --color-oracle1: #ee1f04;
+  --color-oracle2: #cd7836;
+  --cokor-oracle3: #46295a;
+}
+
+.quadrado {
+    background-color: #9ca5eb;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 2%;
+
+}
+
+.quadrado > h2, .quadrado > p {
+    color: #030e20;
+    font-size: 25px;
+}
+
+.alinhar-bloco-1 {
+    left: 35%;
+    height: 300px;
 }
 
 /*do matheus*/
