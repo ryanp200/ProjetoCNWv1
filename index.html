@@ -99,7 +99,27 @@
                 logoAws.style.transition = '0.3s';
                 logoAws.style.transform = rotacao ? 'rotate(15deg)' : 'rotate(0deg)';
                 logoAws.style.borderRadius = rotacao ? '80px' : '8px';
-            });            
+            });
+            
+            
+            const dropdowns = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            const menusDropdown = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            menusDropdown.forEach(menu => {
+                menu.addEventListener('click', (evento) => {
+                    evento.preventDefault();
+                    const itemPai = menu.parentElement;
+                    itemPai.classList.toggle('aberto');
+                });
+            });
+
+            document.addEventListener('click', (evento) => {
+                menusDropdown.forEach(menu => {
+                    const itemPai = menu.parentElement;
+                    if (!itemPai.contains(evento.target)) {
+                        itemPai.classList.remove('aberto');
+                    }
+                });
+            });
         </script>
     </body>
 </html>
