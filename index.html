@@ -8,22 +8,49 @@
         <link rel="icon" type="image/png" href="./imgs/logo/info-logo-simbolo.png">
     </head>
     <body>
-        <header class="barranav" id="menu-navegacao">
-            <section class="barranav-parte">
-                <a href="index.html"><img class="home-nav" src="./imgs/icons/home.svg" alt="Ícone Home"></a>
-                <img id="menu-mostrar" src="./imgs/icons/menu-hamburguer.svg" alt="Menu">
-                <nav>
-                    <ul>
-                        <li><a href="">pg1</a></li>
-                        <li><a href="">pg2</a></li>
-                        <li><a href="">pg3</a></li>
-                        <li><a href="">pg4</a></li>
-                        <li><a href="">pg5</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <a href="./paginas/info.html"><img src="imgs/logo/info-logo-s-texto.png" alt="Logo Info" class="nav-logo-info"></a>
-        </header>
+    <header class="barranav" id="menu-navegacao">
+        <section class="barranav-parte">
+            <a href="../index.html"><img class="home-nav" src="../imgs/icons/home.svg" alt="Ícone Home"></a>
+            <img id="menu-mostrar" src="../imgs/icons/menu-hamburguer.svg" alt="Menu">
+            <nav>
+                <ul>
+                    <li><a href="./paginas/computacao-nuvem.html">Computação em Nuvem</a></li>
+                    <li><a href="./paginas/historia_aws.html">História da AWS</a></li>
+                    <li><a href="./paginas/regioes.html">Zonas de Disponibilidade</a></li>
+                    <li class="dropdown">
+                        <a>Banco de Dados ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./paginas/banco-dados-nuvem.html">BD na Nuvem</a></li>
+                            <li><a href="./paginas/aws-para-oracle.html">Oracle DB</a></li>
+                            <li><a href="./paginas/cluster.html">Clusters</a></li>
+                            <li><a href="./paginas/amazon_rds.html">Amazon RDS</a></li>
+                            <li><a href="./paginas/aurora.html">Amazon Aurora</a></li>
+                            <li><a href="./paginas/dynamodb.html">DynamoDB</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a>Infraestrutura ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./paginas/amazon-ec2.html">Amazon EC2</a></li>
+                            <li><a href="./paginas/aws-para-oracle.html">ELB & Auto Scaling</a></li>
+                            <li><a href="./paginas/amazon-vpc.html">Amazon VPC</a></li>
+                            <li><a href="./paginas/cluster-pratica.html">Cluster na Prática</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a>Segurança ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./paginas/ima.html">IAM</a></li>
+                            <li><a href="./paginas/cloudwatch.html">Cloudwatch</a></li>
+                            <li><a href="./paginas/amazon-vpc.html">Amazon VPC</a></li>
+                            <li><a href="./paginas/backup.html">Backup e Recuperação</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <a href="./paginas/info.html"><img src="../imgs/logo/info-logo-s-texto.png" alt="Logo Info" class="nav-logo-info"></a>
+    </header>
         <section class="conteudo">
             <header id="cabecalho-home">
                 <section id="texto-cabecalho-home">

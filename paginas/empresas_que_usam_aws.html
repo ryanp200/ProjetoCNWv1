@@ -8,18 +8,49 @@
         <link rel="icon" type="image/png" href="../imgs/logo/info-logo-simbolo.png">
     </head>
     <body>
-        <header class="barranav" id="menu-navegacao">
-            <span id="menu-mostrar">&#9776; Menu</span>
+<header class="barranav" id="menu-navegacao">
+        <section class="barranav-parte">
+            <a href="../index.html"><img class="home-nav" src="../imgs/icons/home.svg" alt="Ícone Home"></a>
+            <img id="menu-mostrar" src="../imgs/icons/menu-hamburguer.svg" alt="Menu">
             <nav>
                 <ul>
-                    <li><a href="">pg1</a></li>
-                    <li><a href="">pg2</a></li>
-                    <li><a href="iam.html">IAM (Identify and Access Management)</a></li>
-                    <li><a href="amazon_rds.html">Amazon RDS</a></li>
-                    <li><a href="Empresas_que_usam_AWS.html">Empresas que usam AWS</a></li>
+                    <li><a href="computacao-nuvem.html">Computação em Nuvem</a></li>
+                    <li><a href="historia_aws.html">História da AWS</a></li>
+                    <li><a href="regioes.html">Zonas de Disponibilidade</a></li>
+                    <li class="dropdown">
+                        <a>Banco de Dados ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="banco-dados-nuvem.html">BD na Nuvem</a></li>
+                            <li><a href="aws-para-oracle.html">Oracle DB</a></li>
+                            <li><a href="cluster.html">Clusters</a></li>
+                            <li><a href="amazon_rds.html">Amazon RDS</a></li>
+                            <li><a href="aurora.html">Amazon Aurora</a></li>
+                            <li><a href="dynamodb.html">DynamoDB</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a>Infraestrutura ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="amazon-ec2.html">Amazon EC2</a></li>
+                            <li><a href="aws-para-oracle.html">ELB & Auto Scaling</a></li>
+                            <li><a href="amazon-vpc.html">Amazon VPC</a></li>
+                            <li><a href="cluster-pratica.html">Cluster na Prática</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a>Segurança ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ima.html">IAM</a></li>
+                            <li><a href="cloudwatch.html">Cloudwatch</a></li>
+                            <li><a href="amazon-vpc.html">Amazon VPC</a></li>
+                            <li><a href="backup.html">Backup e Recuperação</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-        </header>
+        </section>
+        <a href="info.html"><img src="../imgs/logo/info-logo-s-texto.png" alt="Logo Info" class="nav-logo-info"></a>
+    </header>
         <section class="conteudo">
             <section>
             <p id="titulo" class="textos-tamanho-0 centralizado-alinhado"><b> Empresas que usam AWS</b></p>
@@ -78,6 +109,25 @@
               titulo.style.color = "#fff";
                 });
             
+
+            const dropdowns = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            const menusDropdown = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            menusDropdown.forEach(menu => {
+                menu.addEventListener('click', (evento) => {
+                    evento.preventDefault();
+                    const itemPai = menu.parentElement;
+                    itemPai.classList.toggle('aberto');
+                });
+            });
+
+            document.addEventListener('click', (evento) => {
+                menusDropdown.forEach(menu => {
+                    const itemPai = menu.parentElement;
+                    if (!itemPai.contains(evento.target)) {
+                        itemPai.classList.remove('aberto');
+                    }
+                });
+            });
         </script>
        
     </body>

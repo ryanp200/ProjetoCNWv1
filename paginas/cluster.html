@@ -6,78 +6,128 @@
     <title>Oque é um Cluster de banco de dados?</title>
     <link rel="stylesheet" href="../css/estilo-geral.css">
 </head>
-<body>
-<header class="barranav" id="menu-navegacao">
-    <span id="menu-mostrar">&#9776; Menu</span>
-    <nav>
-        <ul>
-            <li><a href="">pg1</a></li>
-            <li><a href="">pg2</a></li>
-            <li><a href="">pg3</a></li>
-            <li><a href="">pg4</a></li>
-            <li><a href="">pg5</a></li>
-        </ul>
-    </nav>
-</header>
-<section class="conteudo">
-    <h1 class="centralizado-alinhado">Oque é um Cluster de banco de dados e como se relaciona com a AWS?</h1>
-    <p>Um cluster de banco de dados é um conjunto de servidores (ou instâncias) que trabalham juntos para armazenar e gerenciar dados.</p>
-    <p>Distribuindo a carga de trabalho entre esses servidores, ele oferece muito mais segurança doque um servidor isolado, porque se alguma instancia falhar, o sistema não necessariamente ficara comprometido,
-        pois ainda ha outras instancias operantes, fora que aumenta o desempenho e permite a integração e adição de mais recursos.</p>
-</section>
-<section class="conteudoo2">
-    <p class="textos-tamanho-4 centralizado-alinhado"><b>Relação com a AWS...</b></p>
-    <p>O Amazon Aurora (Aurora) é um mecanismo de banco de dados relacional gerenciado compatível com o MySQL e o PostgreSQL. Colocando em outras palavras, o Amazon Aurora é um serviço
-        da AWS que facilita a configuração, operação e escala de um banco de dados relacional na nuvem.</p>
-    <img src="../imgs/cluster/aurora_architecture.png" id="cluster-aurora" altr="cluster-aurora">
-</section>
-<section> 
-    <p class="textos-tamanho-1 centralizado-alinhado"><button onclick="mostrarTexto()" class="botao-miguelo"><b>Conceitos importantes dentro de um cluster</b></button></p>  
-</section>
-<section class="textoOculto conteudo" id="textoOculto8">
-    <p class="textos-tamanho-2"><b>Failover</b></p>
-    <p class="com-espaco">Pincelando alguns conceitos importantes dentro de um Cluster, vamos começar pelo failover, que, resumidamente, é o processo de troca automática para uma instância secundária quando a principal falha.
-    Esses Clusters podem usar maquina fisicas, maquinas virtuais ou uma cobinação das duas, mas o importanten é que seja algo que possa servir como uma instancia secundaria.
-    O Principal beneficio garantido por um failover é a alta disponibilidade (porque o tempo de inatividade é reduzido).</p>
-        <img src="../imgs/cluster/download.png" id="failover-cluster" alt="failover-cluster">
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <section class="barranav-parte">
+                <a href="../index.html"><img class="home-nav" src="../imgs/icons/home.svg" alt="Ícone Home"></a>
+                <img id="menu-mostrar" src="../imgs/icons/menu-hamburguer.svg" alt="Menu">
+                <nav>
+                    <ul>
+                        <li><a href="computacao-nuvem.html">Computação em Nuvem</a></li>
+                        <li><a href="historia_aws.html">História da AWS</a></li>
+                        <li><a href="regioes.html">Zonas de Disponibilidade</a></li>
+                        <li class="dropdown">
+                            <a>Banco de Dados ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="banco-dados-nuvem.html">BD na Nuvem</a></li>
+                                <li><a href="aws-para-oracle.html">Oracle DB</a></li>
+                                <li><a href="cluster.html">Clusters</a></li>
+                                <li><a href="amazon_rds.html">Amazon RDS</a></li>
+                                <li><a href="aurora.html">Amazon Aurora</a></li>
+                                <li><a href="dynamodb.html">DynamoDB</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a>Infraestrutura ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="amazon-ec2.html">Amazon EC2</a></li>
+                                <li><a href="aws-para-oracle.html">ELB & Auto Scaling</a></li>
+                                <li><a href="amazon-vpc.html">Amazon VPC</a></li>
+                                <li><a href="cluster-pratica.html">Cluster na Prática</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a>Segurança ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ima.html">IAM</a></li>
+                                <li><a href="cloudwatch.html">Cloudwatch</a></li>
+                                <li><a href="amazon-vpc.html">Amazon VPC</a></li>
+                                <li><a href="backup.html">Backup e Recuperação</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <a href="info.html"><img src="../imgs/logo/info-logo-s-texto.png" alt="Logo Info" class="nav-logo-info"></a>
+        </header>
+        <section class="conteudo">
+            <h1 class="centralizado-alinhado">Oque é um Cluster de banco de dados e como se relaciona com a AWS?</h1>
+            <p>Um cluster de banco de dados é um conjunto de servidores (ou instâncias) que trabalham juntos para armazenar e gerenciar dados.</p>
+            <p>Distribuindo a carga de trabalho entre esses servidores, ele oferece muito mais segurança doque um servidor isolado, porque se alguma instancia falhar, o sistema não necessariamente ficara comprometido,
+                pois ainda ha outras instancias operantes, fora que aumenta o desempenho e permite a integração e adição de mais recursos.</p>
+        </section>
+        <section class="conteudoo2">
+            <p class="textos-tamanho-4 centralizado-alinhado"><b>Relação com a AWS...</b></p>
+            <p>O Amazon Aurora (Aurora) é um mecanismo de banco de dados relacional gerenciado compatível com o MySQL e o PostgreSQL. Colocando em outras palavras, o Amazon Aurora é um serviço
+                da AWS que facilita a configuração, operação e escala de um banco de dados relacional na nuvem.</p>
+            <img src="../imgs/cluster/aurora_architecture.png" id="cluster-aurora" altr="cluster-aurora">
+        </section>
+        <section> 
+            <p class="textos-tamanho-1 centralizado-alinhado"><button onclick="mostrarTexto()" class="botao-miguelo"><b>Conceitos importantes dentro de um cluster</b></button></p>  
+        </section>
+        <section class="textoOculto conteudo" id="textoOculto8">
+            <p class="textos-tamanho-2"><b>Failover</b></p>
+            <p class="com-espaco">Pincelando alguns conceitos importantes dentro de um Cluster, vamos começar pelo failover, que, resumidamente, é o processo de troca automática para uma instância secundária quando a principal falha.
+            Esses Clusters podem usar maquina fisicas, maquinas virtuais ou uma cobinação das duas, mas o importanten é que seja algo que possa servir como uma instancia secundaria.
+            O Principal beneficio garantido por um failover é a alta disponibilidade (porque o tempo de inatividade é reduzido).</p>
+                <img src="../imgs/cluster/download.png" id="failover-cluster" alt="failover-cluster">
 
-    <p class="textos-tamanho-2"><b>Replicação</b></p>
-    <p class="com-espaco">A replicação de dados dentro de um cluster é (como o nome sugere) replicar os dados de um cluster, aumentando a redundancia e, assim como o failover, aumentar a tolerancia de um servdidor caso haja uma falha.
-    A Replicação pode ocorrer de duas maneiras:
-    Síncrona: a cópia é feita em tempo real (mais segura, mas pode ser mais lenta).
-    Assíncrona: a cópia é feita com atraso, mas tem menos impacto no desempenho.</p>
-        <img src="../imgs/cluster/Global-DataStore.png" id="replicacao-cluster" alt="replicacao-cluster">
-        
-    <p class="textos-tamanho-2"><b>Escalabilidade</b></p>
-    <p class="com-espaco">A escalabilidade é a capacidade de aumentar os recursos do banco de dados conforme a demanda, aumentando ou o poder de uma maquina, ou adicionando mais servidores e outras instancias.
-    São diversos os beneficios da aplicação desse conceito, mas em geral, isso aumenta em muito a capacidade do banco de dados como um todo, melhorando o processamento de informações e aumentando o espaço de armazenamento de dados.</p>
-        <img src="../imgs/cluster/Artigo-1.png" id="escalabilidade-cluster" alt="escalabilidade-cluster">
-</section>
-<script>
-    function mostrarTexto(){
-        let textoescondido = document.getElementById("textoOculto8");
+            <p class="textos-tamanho-2"><b>Replicação</b></p>
+            <p class="com-espaco">A replicação de dados dentro de um cluster é (como o nome sugere) replicar os dados de um cluster, aumentando a redundancia e, assim como o failover, aumentar a tolerancia de um servdidor caso haja uma falha.
+            A Replicação pode ocorrer de duas maneiras:
+            Síncrona: a cópia é feita em tempo real (mais segura, mas pode ser mais lenta).
+            Assíncrona: a cópia é feita com atraso, mas tem menos impacto no desempenho.</p>
+                <img src="../imgs/cluster/Global-DataStore.png" id="replicacao-cluster" alt="replicacao-cluster">
+                
+            <p class="textos-tamanho-2"><b>Escalabilidade</b></p>
+            <p class="com-espaco">A escalabilidade é a capacidade de aumentar os recursos do banco de dados conforme a demanda, aumentando ou o poder de uma maquina, ou adicionando mais servidores e outras instancias.
+            São diversos os beneficios da aplicação desse conceito, mas em geral, isso aumenta em muito a capacidade do banco de dados como um todo, melhorando o processamento de informações e aumentando o espaço de armazenamento de dados.</p>
+                <img src="../imgs/cluster/Artigo-1.png" id="escalabilidade-cluster" alt="escalabilidade-cluster">
+        </section>
+        <script>
+            function mostrarTexto(){
+                let textoescondido = document.getElementById("textoOculto8");
 
-        if (textoescondido.style.display === "none" || textoescondido.style.display === "") {
-            textoescondido.style.display = "block"; 
-        } else {
-            textoescondido.style.display = "none";  
-        }
-    }
-</script>
+                if (textoescondido.style.display === "none" || textoescondido.style.display === "") {
+                    textoescondido.style.display = "block"; 
+                } else {
+                    textoescondido.style.display = "none";  
+                }
+            }
+        </script>
 
-<script>
-    const menuNav = document.querySelector('.barranav');
-    const menuMostrar = document.getElementById('menu-mostrar');
-    menuMostrar.addEventListener('click', (e) => {
-        e.stopPropagation();
-        menuNav.classList.toggle('open');
-    });
-    document.addEventListener('click', (e) => {
-        if (!menuNav.contains(e.target)) {
-            menuNav.classList.remove('open');
-        }
-    });
-</script>
-</link>  
-</body>
+        <script>
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+
+            const dropdowns = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            const menusDropdown = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            menusDropdown.forEach(menu => {
+                menu.addEventListener('click', (evento) => {
+                    evento.preventDefault();
+                    const itemPai = menu.parentElement;
+                    itemPai.classList.toggle('aberto');
+                });
+            });
+
+            document.addEventListener('click', (evento) => {
+                menusDropdown.forEach(menu => {
+                    const itemPai = menu.parentElement;
+                    if (!itemPai.contains(evento.target)) {
+                        itemPai.classList.remove('aberto');
+                    }
+                });
+            });
+
+        </script>
+    </body>
 </html>
