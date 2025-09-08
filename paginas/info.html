@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> INFO | Sobre o Blog </title>
+        <link rel="stylesheet" href="../css/estilo-geral.css">
+        <link rel="icon" type="image/png" href="../imgs/logo/info-logo-simbolo.png">
+    </head>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <section class="barranav-parte">
+                <a href="../index.html"><img class="home-nav" src="../imgs/icons/home.svg" alt="Ícone Home"></a>
+                <img id="menu-mostrar" src="../imgs/icons/menu-hamburguer.svg" alt="Menu">
+                <nav>
+                    <ul>
+                        <li><a href="">pg1</a></li>
+                        <li><a href="">pg2</a></li>
+                        <li><a href="">pg3</a></li>
+                        <li><a href="">pg4</a></li>
+                        <li><a href="">pg5</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <a href="info.html"><img src="../imgs/logo/info-logo-s-texto.png" alt="Logo Info" class="nav-logo-info"></a>
+        </header>
+        <section class="conteudo">
+            <header>    
+                <h1>INTELLIGENT FEED ONLINE</h1>
+                <img id="logo-info-sobre" src="../imgs/logo/info-logo-s-texto.png" alt="Logo Info">
+            </header>
+            <section class="bloco-texto-50 justificado">
+                <p class="textos-tamanho-1 margem-media">O <strong>INFO (Intelligent Feed Online)</strong> é um blog dedicado a compartilhar conhecimento sobre o <em>mundo da tecnologia</em>, com foco em <strong>bancos de dados</strong>, <strong>computação em nuvem</strong> e soluções <strong>AWS</strong>.</p>
+                <p class="textos-tamanho-1 margem-media">Nosso objetivo é tornar conceitos técnicos mais acessíveis, reunindo informação útil e confiável para quem busca aprender, se atualizar ou se inspirar na área de TI.</p>
+            </section>
+        </section>
+        <footer>
+            <section>
+                <span>Desenvolvido por</span>
+                <img src="../imgs/logo/info-logo.png" alt="Logo Info">
+            </section>
+            <section>
+                <span><a href="./referencias.html">Referências</a></span>
+            </section>
+        </footer>
+
+        <script>
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+        </script>
+    </body>
+</html>
