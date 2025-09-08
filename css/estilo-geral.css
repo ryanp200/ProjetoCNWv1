@@ -242,7 +242,7 @@ p{
 }
 .bloco-texto-30{
     width: 30%;
-  
+}
 .bloco-texto-75{
     width: 75%;
 }
@@ -505,11 +505,6 @@ p{
     gap: 40px;
     align-items: center;
 }
-=======
-  --color-2: #aa2e00;   
-  --color-3: #f5f5f5;
-}
-
 .mudar-oracle{
   --color-oracle1: #ee1f04;
   --color-oracle2: #cd7836;
@@ -523,17 +518,14 @@ p{
     margin-bottom: 2%;
 
 }
-
 .quadrado > h2, .quadrado > p {
     color: #030e20;
     font-size: 25px;
 }
-
 .alinhar-bloco-1 {
     left: 35%;
     height: 300px;
 }
-
 /*do matheus*/
 
 .meio{ 
@@ -544,15 +536,12 @@ p{
   
     
 }
-
 .container_logo_empresas{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 200%;
 }
-
-
 .logo_empresas {
     width: 100%;
     height: auto;
@@ -568,11 +557,9 @@ p{
     margin-top: 100px;
     margin-bottom: 230px;
 }
-
 .texto_com_imagem_do_lado-matheus{
     width: 100%;
 }
-
 .imagem_padrao_mp{
     width: 20%;
     height: auto;
@@ -580,16 +567,13 @@ p{
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     margin-top: 20px;
 }
-
 #vantagem_matheus{
     background-color: #030e20;
 }
-
 .lista_vantagens_desvantagens{
     justify-content: center;
     background-color: #030e20;
 }
-
 .botao_matheus{
     display: flex;
     justify-content: center;
@@ -599,10 +583,7 @@ p{
     font-family: "Sansation", sans-serif;
     margin-top: 50px;
     margin-bottom: 20px;
-  
-
 }
-
 
 #iam_imagem{
     width: 50%;
