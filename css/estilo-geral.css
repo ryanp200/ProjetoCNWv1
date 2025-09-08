@@ -372,3 +372,13 @@ p{
       transition: all 0.3s ease;
       outline: none;
     }
+
+#amazon_vpc{
+     width: 50%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    display: flex;
+    justify-self: center;
+}

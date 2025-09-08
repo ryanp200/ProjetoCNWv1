@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Amazon VPC </title>
+        <link rel="stylesheet" href="../css/estilo-geral.css">
+        <link rel="icon" type="image/png" href="../imgs/logo/info-logo-simbolo.png">
+    </head>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <span id="menu-mostrar">&#9776; Menu</span>
+            <nav>
+                <ul>
+                    <li><a href="">pg1</a></li>
+                    <li><a href="amazon_vpc.html">Amazon VPC</a></li>
+                    <li><a href="iam.html">IAM (Identify and Access Management)</a></li>
+                    <li><a href="amazon_rds.html">Amazon RDS</a></li>
+                    <li><a href="Empresas_que_usam_AWS.html">Empresas que usam AWS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="conteudo">
+            <section align="center">
+            <h1 class="centralizado-alinhado" id="titulo_vpc"> Amazon Virtual Private Cloud</h1>
+            </section>
+            <section class="meio">
+                <section class="bloco-texto-75 justificado">
+                    <p class="textos-tamanho-1 margem-grande identado">A Amazon Virtual Private Cloud (Amazon VPC) é um serviço que oferece controle total sobre o seu ambiente de rede virtual, incluindo o posicionamento de recursos, a conectividade e a segurança.
+                    <p class="textos-tamanho-1 margem-grande identado">Essa rede virtual funciona de maneira semelhante a uma rede tradicional que você operaria em um data center próprio, mas com os benefícios da infraestrutura escalável da AWS.
+                    </p>
+                </section>
+            </section>
+            <img src="../imgs/logo/amazon_vpc.png" id="amazon_vpc" alt="Amazon Virtual Private Cloud">
+        </section>
+        
+        <script>
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+
+        const titulo = document.getElementById("titulo_vpc");
+
+        setInterval(() => {
+        titulo.style.transform = "translateY(-10px)";
+        setTimeout(() => {
+          titulo.style.transform = "translateY(0)";
+         }, 150);
+         }, 1000);
+              
+            
+        </script>
+       
+    </body>
+</html>
