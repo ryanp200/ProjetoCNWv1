@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Amazon EC2 </title>
+        <link rel="stylesheet" href="../css/estilo-geral.css">
+        <link rel="icon" type="image/png" href="../imgs/logo/info-logo-simbolo.png">
+
+    </head>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <span id="menu-mostrar">&#9776; Menu</span>
+            <nav>
+                <ul>
+                    <li><a href="">pg1</a></li>
+                    <li><a href="">pg2</a></li>
+                    <li><a href="">pg3</a></li>
+                    <li><a href="">pg4</a></li>
+                    <li><a href="">pg5</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="conteudo">
+            <header>
+                <section class="layout-colunas">
+                    <h1 class="centralizado-alinhado">Amazon EC2</h1>
+                    <section>
+                        <h2>O que é o Amazon EC2?</h2>
+                        <p class="textos-tamanho-2 justificado">O Amazon Elastic Compute Cloud (Amazon EC2) é um serviço da AWS que oferece servidores virtuais na nuvem com capacidade de computação ajustável conforme a necessidade. Com o EC2, é possível criar e gerenciar instâncias (máquinas virtuais) de forma fácil, flexível e com total controle.</p>
+                        <p class="textos-tamanho-2 justificado">A principal vantagem do EC2 é a escalabilidade, sendo capaz de aumentar ou reduzir os recursos conforme o uso, pagando apenas pelo que utilizar. Isso diminui os custos com infraestrutura física e acelera o desenvolvimento e a entrega de aplicações.</p>
+                    </section>
+                    <img src="../imgs/logo/amazon-ec2.png" alt="Logotipo em formato de hexágono laranja do Amazon EC2" class="imagens">
+                </section>
+            </header>
+
+            <section class="textos-tamanho-3 justificado conteudo">
+                <h2 class="esquerda-alinhado">Como funciona o Amazon EC2?</h2>
+                <p>Uma instância EC2 é um servidor virtual que roda na nuvem da AWS, podendo escolher entre vários tipos de instância, cada um com combinações específicas de CPU, memória, armazenamento e rede, ideais para diferentes necessidades de uso.</p>
+                <p>É possível ajustar a capacidade facilmente, aumentado ou reduzindo recursos conforme a demanda, como em períodos de pico ou tarefas que exigem muito processamento.</p>
+
+                <h2>Principais recursos do Amazon EC2</h2>
+                <dl>
+                    <dt>Instâncias</dt>
+                    <dd>Servidores virtuais escaláveis e configuráveis.</dd>
+                    <dt>AMIs (Amazon Machine Images)</dt>
+                    <dd>Modelos pré-configurados com sistema operacional e software.</dd>
+                    <dt>Tipos de instância</dt>
+                    <dd>Diversas combinações de CPU, memória e rede para diferentes necessidades.</dd>
+                    <dt>Amazon EBS</dt>
+                    <dd>Volumes de armazenamento persistente para dados.</dd>
+                    <dt>Armazenamento de instâncias</dt>
+                    <dd>Armazenamento temporário, ideal para dados transitórios.</dd>
+                    <dt>Pares de chaves</dt>
+                    <dd>Mecanismo seguro para autenticação em instâncias.</dd>
+                    <dt>Grupos de segurança</dt>
+                    <dd>Firewall virtual que controla o tráfego de entrada e saída.</dd>
+                </dl>
+
+                <h2>Casos de uso</h2>
+                <ul>
+                    <li>Hospedagem de aplicações web e APIs;</li>
+                    <li>Ambientes de desenvolvimento e teste;</li>
+                    <li>Análises e big data;</li>
+                    <li>Processamento de imagens ou vídeos;</li>
+                    <li>Execução de sistemas legados.</li>
+                </ul>
+            
+                <h2>Benefícios do Amazon EC2</h2>
+                <dl>
+                    <dt>Escalabilidade elástica</dt>
+                    <dd>Lance centenas ou milhares de instâncias conforme necessário.</dd>
+                    <dt>Custo sob demanda</dt>
+                    <dd>Pague apenas pelo tempo de uso, sem necessidade de investimento inicial.</dd>
+                    <dt>Flexibilidade de escolha</dt>
+                    <dd>Tipos de instância otimizados para diferentes workloads.</dd>
+                    <dt>Segurança integrada</dt>
+                    <dd>Compatível com padrões como o <strong>PCI DSS</strong>, usado para dados de cartão de crédito.</dd>
+                    <dt>Alta disponibilidade</dt>
+                    <dd>Suporte a zonas de disponibilidade, balanceamento de carga e backups automáticos.</dd>
+                </dl>
+
+                <h2>Serviços relacionados ao EC2</h2>
+                <dl>
+                    <dt>Amazon EC2 Auto Scaling</dt>
+                    <dd>Ajuste automático da quantidade de instâncias conforme a carga.</dd>
+                    <dt>Elastic Load Balancing</dt>
+                    <dd>Distribuição automática do tráfego entre múltiplas instâncias.</dd>
+                    <dt>Amazon CloudWatch</dt>
+                    <dd>Monitoramento de métricas e logs.</dd>
+                    <dt>AWS Backup</dt>
+                    <dd>Backup automatizado de instâncias e volumes.</dd>
+                    <dt>AWS Systems Manager</dt>
+                    <dd>Gerenciamento de infraestrutura em larga escala.</dd>
+                    <dt>Amazon GuardDuty</dt>
+                    <dd>Detecção de ameaças e comportamento anormal.</dd>
+                    <dt>EC2 Image Builder</dt>
+                    <dd>Criação automatizada de imagens de servidor personalizadas.</dd>
+                    <dt>AWS Launch Wizard</dt>
+                    <dd>Implantação simplificada de aplicações de terceiros.</dd>
+                </dl>
+
+                <h2>Interfaces de acesso ao EC2</h2>
+                <dl>
+                    <dt>Console da AWS</dt>
+                    <dd>Interface gráfica no navegador.</dd>
+                    <dt>AWS CLI (Command Line Interface)</dt>
+                    <dd>Gerenciamento via linha de comando.</dd>
+                    <dt>AWS CloudFormation</dt>
+                    <dd>Provisionamento de infraestrutura como código (IaC).</dd>
+                    <dt>SDKs da AWS</dt>
+                    <dd>Para integração com aplicações em diversas linguagens.</dd>
+                    <dt>Ferramentas para PowerShell</dt>
+                    <dd>Scripts e automações em ambientes Microsoft.</dd>
+                    <dt>API de Consulta</dt>
+                    <dd>Requisições diretas via HTTP(S);</dd>
+                </dl>
+
+                <h2>Modelos de preços do Amazon EC2</h2>
+                <dl>
+                    <dt>Nível gratuito</dt>
+                    <dd>Inicie gratuitamente com instâncias elegíveis.</dd>
+                    <dt>Sob demanda</dt>
+                    <dd>Pague por segundo, sem compromissos.</dd>
+                    <dt>Saving Plans</dt>
+                    <dd>Economize sem compromissos de uso por hora, por 1 ou 3 anos.</dd>
+                    <dt>Instâncias reservadas</dt>
+                    <dd>Descontos para uso consistente com tipo e região definidos.</dd>
+                    <dt>Instâncias spot</dt>
+                    <dd>Aproveite instâncias não utilizadas com preços reduzidos.</dd>
+                    <dt>Hosts dedicados</dt>
+                    <dd>Servidores físicos exclusivos, ideais para conformidade e licenças.</dd>
+                    <dt>Reservas e capacidade</dt>
+                    <dd>Garanta capacidade em zonas de disponibilidade específicas.</dd>
+                </dl>
+
+                <h2>Otimização de custos e gestão</h2>
+                <dl>
+                    <dt>AWS Trusted Advisor</dt>
+                    <dd>Recomendações para otimizar custo, segurança e desempenho.</dd>
+                    <dt>AWS Cost Explorer</dt>
+                    <dd>Analise seu uso e gasto com EC2 ao longo do tempo.</dd>
+                    <dt>Modernization Calculator</dt>
+                    <dd>Estime o custo de modernização de workloads legadas.</dd>
+                </dl>
+            </section>
+        </section>
+        <script>
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+        </script>
+    </body>
+</html>
