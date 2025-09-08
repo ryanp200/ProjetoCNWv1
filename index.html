@@ -3,21 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sla | Início </title>
+        <title>INFO | Início</title>
         <link rel="stylesheet" href="css/estilo-geral.css">
+        <link rel="icon" type="image/png" href="./imgs/logo/info-logo-simbolo.png">
     </head>
     <body>
         <header class="barranav" id="menu-navegacao">
-            <span id="menu-mostrar">&#9776; Menu</span>
-            <nav>
-                <ul>
-                    <li><a href="">pg1</a></li>
-                    <li><a href="">pg2</a></li>
-                    <li><a href="">pg3</a></li>
-                    <li><a href="">pg4</a></li>
-                    <li><a href="">pg5</a></li>
-                </ul>
-            </nav>
+            <section class="barranav-parte">
+                <a href="index.html"><img class="home-nav" src="./imgs/icons/home.svg" alt="Ícone Home"></a>
+                <img id="menu-mostrar" src="./imgs/icons/menu-hamburguer.svg" alt="Menu">
+                <nav>
+                    <ul>
+                        <li><a href="">pg1</a></li>
+                        <li><a href="">pg2</a></li>
+                        <li><a href="">pg3</a></li>
+                        <li><a href="">pg4</a></li>
+                        <li><a href="">pg5</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <a href="./paginas/info.html"><img src="imgs/logo/info-logo-s-texto.png" alt="Logo Info" class="nav-logo-info"></a>
         </header>
         <section class="conteudo">
             <header id="cabecalho-home">
@@ -39,6 +44,15 @@
                 </section>
             </section>
         </section>
+        <footer>
+            <section>
+                <span>Desenvolvido por</span>
+                <img src="imgs/logo/info-logo.png" alt="Logo Info">
+            </section>
+            <section>
+                <span><a href="./paginas/referencias.html">Referências</a></span>
+            </section>
+        </footer>
         <script>
             const menuNav = document.querySelector('.barranav');
             const menuMostrar = document.getElementById('menu-mostrar');

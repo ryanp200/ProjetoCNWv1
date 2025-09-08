@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> INFO | Referências </title>
+        <link rel="stylesheet" href="../css/estilo-geral.css">
+        <link rel="icon" type="image/png" href="../imgs/logo/info-logo-simbolo.png">
+    </head>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <section class="barranav-parte">
+                <a href="../index.html"><img class="home-nav" src="../imgs/icons/home.svg" alt="Ícone Home"></a>
+                <img id="menu-mostrar" src="../imgs/icons/menu-hamburguer.svg" alt="Menu">
+                <nav>
+                    <ul>
+                        <li><a href="">pg1</a></li>
+                        <li><a href="">pg2</a></li>
+                        <li><a href="">pg3</a></li>
+                        <li><a href="">pg4</a></li>
+                        <li><a href="">pg5</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <a href="info.html"><img src="../imgs/logo/info-logo-s-texto.png" alt="Logo Info" class="nav-logo-info"></a>
+        </header>
+        <section class="conteudo">
+            <header>
+                <h1 class="centralizado-alinhado">Referências</h1>
+            </header>
+            <section>
+                <ul id="lista-referencias">
+                    <li><a href="https://aws.amazon.com/about-aws/our-origins" target="_blank">
+                        About AWS: Our Origins <span class="referencias-fonte">aws.amazon.com</span>
+                    </a></li>
+
+                    <li><a href="https://aws.amazon.com/pt/solutions/case-studies/innovators/ifood/" target="_blank">
+                        iFood na AWS <span class="referencias-fonte">aws.amazon.com</span>
+                    </a></li>
+
+                    <li><a href="https://aws.amazon.com/pt/government-education/government/" target="_blank">
+                        AWS para Governo <span class="referencias-fonte">aws.amazon.com</span>
+                    </a></li>
+
+                    <li><a href="https://aws.amazon.com/pt/iam/" target="_blank">
+                        AWS IAM <span class="referencias-fonte">aws.amazon.com</span>
+                    </a></li>
+
+                    <li><a href="https://aws.amazon.com/pt/rds/" target="_blank">
+                        Amazon RDS <span class="referencias-fonte">aws.amazon.com</span>
+                    </a></li>
+
+                    <li><a href="https://aws.amazon.com/pt/cloudwatch/faqs/" target="_blank">
+                        Amazon CloudWatch FAQ <span class="referencias-fonte">aws.amazon.com</span>
+                    </a></li>
+
+                    <li><a href="https://aws.amazon.com/pt/blogs/containers/appmesh-integrating-cross-vpc-ecs-cluster-for-enhanced-security/" target="_blank">
+                        App Mesh + ECS Cross-VPC <span class="referencias-fonte">aws.amazon.com</span>
+                    </a></li>
+
+                    <li><a href="https://aws.amazon.com/pt/about-aws/global-infrastructure/regions_az/" target="_blank">
+                        Regiões de disponibilidade da AWS <span class="referencias-fonte">aws.amazon.com</span>
+                    </a></li>
+
+                    <li><a href="https://docs.aws.amazon.com/pt_br/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.html" target="_blank">
+                        Aurora Overview <span class="referencias-fonte">docs.aws.amazon.com</span>
+                    </a></li>
+
+                    <li><a href="https://docs.aws.amazon.com/pt_br/AmazonRDS/latest/UserGuide/Welcome.html" target="_blank">
+                        Amazon RDS User Guide <span class="referencias-fonte">docs.aws.amazon.com</span>
+                    </a></li>
+
+                    <li><a href="https://aws.amazon.com/pt/what-is-cloud-computing/" target="_blank">
+                        O que é computação em nuvem <span class="referencias-fonte">aws.amazon.com</span>
+                    </a></li>
+
+                    <li><a href="https://aws.amazon.com/pt/compare/the-difference-between-saas-and-on-premises/" target="_blank">
+                        Diferença entre SaaS e on-premises <span class="referencias-fonte">aws.amazon.com</span>
+                    </a></li>
+
+                    <li><a href="https://cloud.google.com/discover/types-of-cloud-computing?hl=pt-BR" target="_blank">
+                        Tipos de computação em nuvem <span class="referencias-fonte">cloud.google.com</span>
+                    </a></li>
+
+                    <li><a href="https://cloud.google.com/learn/what-is-a-cloud-database?hl=pt-BR" target="_blank">
+                        Visão geral de bancos de dados na nuvem <span class="referencias-fonte">cloud.google.com</span>
+                    </a></li>
+                </ul>
+            </section>
+        </section>
+        <footer>
+            <section>
+                <span>Desenvolvido por</span>
+                <img src="../imgs/logo/info-logo.png" alt="Logo Info">
+            </section>
+            <section>
+                <span><a href="referencias.html">Referências</a></span>
+            </section>
+        </footer>
+        <script>
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+        </script>
+    </body>
+</html>

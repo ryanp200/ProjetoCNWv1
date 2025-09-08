@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> INFO | amazon rds para oracle  </title>
+        <link rel="stylesheet" href="../css/estilo-geral.css">
+        <link rel="icon" type="image/png" href="../imgs/logo/info-logo-simbolo.png">
+</head>
+
+<body>
+    <header class="barranav" id="menu-navegacao">
+        <span id="menu-mostrar">&#9776; Menu</span>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="/paginas/computacao-nuvem.html"">Definição</a></li>
+                <li><a href=" /paginas/historia_aws.html">História</a></li>
+                <li><a href="">pg4</a></li>
+                <li><a href="">pg5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="conteudo">
+        <section>
+            <h1 class="centralizado-alinhado centralizado-alinhado animacao-palavra mudar-cor sombra-aws">Amazon RDS
+                para <span class="animacao-palavra-oracle mudar-oracle" id="oracle">Oracle</span></h1>
+        </section>
+        <figure>
+            <img src="../imgs/rsd/awsrsd.webp" alt="rsd Oracle" id="img-rsd">
+        </figure>
+        <section class="centralizado-alinhado bloco-texto-50 posicao-absoluta" id="texto-rsd">
+            <h2 class="h2_paragrafo">O que é</h2>
+            <p class="textos-tamanho-3 quebra_linha">
+                O Amazon RDS para oracle é um banco de dados comercial totalmente gerenciado que facilita a
+                configuração,
+                a operação, configuração e a escalabilidade de implantações de banco de dados Oracle na nuvem.
+                Com o Amazon RDS é posivel se concentrar na realizalção de inovações e no desenvolvimento enquando ele
+                gerencia as tarefas demoradas de administração de banco de dados, como provisionamento de hardware,
+                aplicação de patches,
+                backup e recuperação, detecção de falhas e reparo.
+
+            </p>
+            <p class="textos-tamanho-3 quebra_linha">
+                O RDS para oracle pode ser executado com dois modelos de lincenciamento, sendo elas o modelo "Licença
+                inclusa"
+                onde não é necessário ter adquirido separadamente licenças da Oracle e o "Traga a sua própria licença"
+                (BYOL - Bring Your Own License),
+                onde é possível usar suas licenças existentes do Oracle Database para implantar bancos de dados no
+                Amazon RDS.
+
+            </p>
+        </section>
+        <section class="centralizado-alinhado bloco-texto-50 posicao-absoluta" id="texto-rsd-2">
+            <h2 class="h2_paragrafo" id="margin-top-beneficios">Beneficios</h2>
+            <p class="textos-tamanho-3 quebra_linha">
+                <spam class="span-bold">Gerenciamento total:</spam> O RDS é gerenciado pelo Amazon Relational Database
+                Service
+                o que faz que não seja necessário se preocupar com tarefas de gerenciamento de banco de dados, como
+                provisionamento de hardware,
+                aplicação de patches de software, instalação, configuração e backup
+            </p>
+            <p class="textos-tamanho-3 quebra_linha">
+                <spam class="span-bold">Disponibilidade e confiabilidade</spam>
+                O Amazon RDS para Oracle facilita o uso da replicação para aumentar a disponibilidade e a confiabilidade
+                de workloads de produção. Com a opção de implantação Multi-AZ
+                é possivel executar workloads de missão crítica com alta disponibilidade e failover automatizado.
+
+            </p>
+            <p class="textos-tamanho-3 quebra_linha">
+                <spam class="span-bold">Performance rápida e previsível</spam>
+                As instâncias do Amazon RDS suportam até 64 TB de armazenamento integrado em volumes SSD de alta
+                performance do Amazon Elastic Block Store (EBS).
+            </p>
+            <p class="textos-tamanho-3 quebra_linha">
+                <spam class="span-bold">Migração fácil</spam>
+                O Amazon RDS for Oracle oferece os benefícios completos de uma solução de serviço gerenciado podendo usar a abordagem
+                "lift-and-shift" para assim migara o banco de dados Oracle para o Amazon RDS for Oracle
+            </p>
+        </section>
+        <figure>
+            <img src="../imgs/rsd/awsoracle.avif" alt="rsd Oracle" id="oracle-rsd">
+        </figure>
+
+
+    </section>
+            <footer>
+            <section>
+                <span>Desenvolvido por</span>
+                <img src="../imgs/logo/info-logo.png" alt="Logo Info">
+            </section>
+            <section>
+                <span><a href="./paginas/referencias.html">Referências</a></span>
+            </section>
+        </footer>
+
+    <script>
+        const menuNav = document.querySelector('.barranav');
+        const menuMostrar = document.getElementById('menu-mostrar');
+        menuMostrar.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuNav.classList.toggle('open');
+        });
+        document.addEventListener('click', (e) => {
+            if (!menuNav.contains(e.target)) {
+                menuNav.classList.remove('open');
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
