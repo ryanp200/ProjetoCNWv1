@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> O que é computação em nuvem? </title>
+        <link rel="stylesheet" href="../css/estilo-geral.css">
+        <link rel="icon" type="image/png" href="../imgs/logo/info-logo-simbolo.png">
+    </head>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <span id="menu-mostrar">&#9776; Menu</span>
+            <nav>
+                <ul>
+                    <li><a href="">pg1</a></li>
+                    <li><a href="">pg2</a></li>
+                    <li><a href="">pg3</a></li>
+                    <li><a href="">pg4</a></li>
+                    <li><a href="">pg5</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="conteudo">
+            <header>
+                <section id="texto-cabecalho-home">
+                    <h1 class="centralizado-alinhado">O que é Computação em Nuvem?</h1>
+                    <p class="textos-tamanho-2 centralizado-alinhado">A computação em nuvem é um serviço que permite usar recursos de tecnologia, como servidores, armazenamento e programas, pela internet. Em vez de comprar e manter equipamentos físicos, você pode acessar esses recursos quando precisar e pagar apenas pelo que usar.</p>
+                </section>
+            </header>
+            <section>
+                <h2 class="esquerda-alinhado">Tipos de nuvem</h2>
+                <section class="layout-colunas">
+                    <dl>
+                        <dt>Nuvem Pública</dt>
+                        <dd>As nuvens públicas fornecem recursos como computação, armazenamento, rede e aplicativos pela internet. São operadas por provedores terceirizados, como AWS e o Google Cloud, elas garantem alta escalabilidade, flexibilidade e acesso fácil.</dd>
+                        <dt>Nuvem Privada</dt>
+                        <dd>Criadas e utilizadas por uma única organização, normalmente no próprio local da empresa ou em data centers exclusivos, as nuvens privadas oferecem maior controle, personalização e segurança, porém com custos mais elevados e limitações similares à infraestrutura tradicional.</dd>
+                        <dt>Nuvem Híbrida</dt>
+                        <dd>A nuvem híbrida combina ambientes da nuvem privada e pública, permitindo que as organizações utilizem o ambiente mais adequado para cada carga de trabalho. Essa abordagem aumenta a flexibilidade e reduz riscos.</dd>
+                    </dl>
+                    <img src="../imgs/imagens/tipos-nuvem.jpg" alt="Ilustração de uma rede de computação em nuvem" class="imagens">
+                </section>
+
+                <h2>Tipos de serviços</h2>
+                <dl>
+                    <dt>Infraestrutura como Serviço (IaaS)</dt>
+                    <dd>Na <strong>IaaS</strong>, você aluga recursos de infraestrutura, como servidores, redes e armazenamento fornecidos e mantidos pelo provedor. A responsabilidade do usuário inclui a instalação e gestão de sistemas operacionais, aplicações e dados.</dd>
+                    <dt>Plataforma como Serviço (PaaS)</dt>
+                    <dd>A <strong>PaaS</strong> oferece um ambiente completo para desenvolvimento, testes e implantação de aplicações, o provedor gerencia toda a infraestrutura, sistemas operacionais, banco de dados e ferramentas, permitindo que o desenvolvedor se concentre apenas no código e na lógica de aplicação.</dd>
+                    <dt>Software como Serviço (SaaS)</dt>
+                    <dd>No <strong>SaaS</strong>, os usuários acessam aplicações completas diretamente pela internet sem necessidade de instalação, configuração ou manutenção. O provedor gerencia toda a infraestrutura.</dd>
+                </dl>
+            </section>
+
+            <section class="textos-tamanho-3 justificado">
+                <h2>On-Premise</h2>
+                <p>No modelo <strong>on-premise</strong>, o software é instalado em servidores físicos dentro da própria empresa, toda a infraestrutura necessária, como servidores, redes, sistemas operacionais, bancos de dados e segurança, é adquirida, configurada e mantida internamente pela organização.</p>
+                <p>A principal diferença entre a computação em nuvem e o modelo on-premise está em como os recursos são gerenciados. Na nuvem, empresas como a AWS fornecem toda a infraestrutura e cuidam da manutenção. No modelo on-premise, a própria empresa é responsável por tudo.</p>
+                <h3>Vantagens da Computação em Nuvem em relação ao On-Premise</h3>   
+                <ul>
+                    <li><strong>Escalabilidade rápida: </strong>é possível aumentar ou reduzir os recursos conforme a necessidade, sem adquirir novos equipamentos.</li>
+                    <li><strong>Redução de custos: </strong>pagamento sob demanda, apenas pelo que for utilizado, evitando altos investimentos iniciais.</li>
+                    <li><strong>Agilidade na implantação: </strong>novos serviços e aplicações podem ser ativados em minutos, sem instalação manual de infraestrutura.</li>
+                    <li><strong>Alta disponibilidade: </strong>infraestrutura distribuída globalmente, com backups automáticos.</li>
+                    <li><strong>Segurança avançada: </strong>uso de criptografia, controle de acesso e monitoramento contínuo, com conformidade a normas internacionais.</li>
+                </ul>
+            </section>
+        </section>
+        <script>
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+        </script>
+    </body>
+</html>
