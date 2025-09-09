@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Banco de dados na nuvem </title>
+        <link rel="stylesheet" href="../css/estilo-geral.css">
+        <link rel="icon" type="image/png" href="../imgs/logo/info-logo-simbolo.png">
+
+    </head>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <section class="barranav-parte">
+                <a href="../index.html"><img class="home-nav" src="../imgs/icons/home.svg" alt="Ícone Home"></a>
+                <img id="menu-mostrar" src="../imgs/icons/menu-hamburguer.svg" alt="Menu">
+                <nav>
+                    <ul>
+                        <li><a href="computacao-nuvem.html">Computação em Nuvem</a></li>
+                        <li><a href="historia_aws.html">História da AWS</a></li>
+                        <li><a href="regioes.html">Zonas de Disponibilidade</a></li>
+                        <li class="dropdown">
+                            <a>Banco de Dados ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="banco-dados-nuvem.html">BD na Nuvem</a></li>
+                                <li><a href="aws-para-oracle.html">Oracle DB</a></li>
+                                <li><a href="cluster.html">Clusters</a></li>
+                                <li><a href="amazon_rds.html">Amazon RDS</a></li>
+                                <li><a href="aurora.html">Amazon Aurora</a></li>
+                                <li><a href="dynamodb.html">DynamoDB</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a>Infraestrutura ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="amazon-ec2.html">Amazon EC2</a></li>
+                                <li><a href="aws-para-oracle.html">ELB & Auto Scaling</a></li>
+                                <li><a href="amazon-vpc.html">Amazon VPC</a></li>
+                                <li><a href="cluster-pratica.html">Cluster na Prática</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a>Segurança ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ima.html">IAM</a></li>
+                                <li><a href="cloudwatch.html">Cloudwatch</a></li>
+                                <li><a href="amazon-vpc.html">Amazon VPC</a></li>
+                                <li><a href="backup.html">Backup e Recuperação</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <a href="info.html"><img src="../imgs/logo/info-logo-s-texto.png" alt="Logo Info" class="nav-logo-info"></a>
+        </header>
+        <section class="conteudo">
+            <header>
+                <section class="layout-colunas">
+                    <h1 class="centralizado-alinhado">Visão geral de banco de dados na nuvem</h1>
+                    <section>
+                        <h2>O que é um banco de dados na nuvem?</h2>
+                        <p class="textos-tamanho-2 justificado">Um banco de dados na nuvem é uma ferramenta que funciona em ambientes de nuvem pública ou híbrida e serve para organizar, guardar e administrar dados, sejam eles estruturados, semiestruturados ou não estruturados. Assim como os bancos de dados tradicionais, ele garante a integridade das informações, mas com benefícios extras da computação em nuvem, como:</p>
+                        <ul class="textos-tamanho-2">
+                            <li>Escalabilidade sob demanda;</li>
+                            <li>Custos operacionais reduzidos;</li>
+                            <li>Alta disponibilidade;</li>
+                            <li>Agilidade no desenvolvimento;</li>
+                            <li>Menor tempo de provisionamento</li>
+                        </ul>
+                    </section>
+                    <img src="../imgs/imagens/banco-nuvem.jpg" alt="Diagrama mostrando três tipos de nuvem interligados: nuvem privada (verde), nuvem pública (laranja) e nuvem híbrida (azul)" class="imagens">
+                </section>
+            </header>
+
+            <section class="textos-tamanho-3 justificado conteudo">
+                <h2 class="esquerda-alinhado">Tipos de bancos de dados na nuvem</h2>
+                <h3>Relacionais (SQL)</h3>
+                <p>Utilizam tabelas organizadas em colunas e linhas com esquemas já definidos, são mais indicados para armazenar dados estruturados e para sistemas que precisam garantir integridade, consistência e confiabilidade nas operações realizadas sobre os dados. <strong>Exemplos:</strong></p>
+                <ul>
+                    <li>MySQL;</li>
+                    <li>PostgreSQL;</li>
+                    <li>SQL Server;</li>
+                    <li>Oracle;</li>
+                    <li>Cloud SQL;</li>
+                    <li>Spanner.</li>
+                </ul>
+                
+                <h3>Não relacionais (NoSQL)</h3>
+                <p>Projetados para lidar com grandes volumes de dados não estruturados ou semiestruturados. Não exigem um esquema fixo e são altamente flexíveis. <strong>Exemplos:</strong></p>
+                <ul>
+                    <li>MongoDB;</li>
+                    <li>Redis;</li>
+                    <li>Cassandra;</li>
+                    <li>HBase;</li>
+                    <li>Cloud Bigtable.</li>
+                </ul>
+
+                <h2>Por que usar bancos de dados na nuvem?</h2>
+                <p>Com o aumento muito rápido da quantidade de dados, a necessidade por soluções mais flexíveis e que possam crescer facilmente é maior do que nunca. A combinação de diferentes fontes de informação, o processamento dos dados em tempo real e a busca constante por inovação exige novas formas de armazenar esses dados.</p>
+                <h3>Desafios enfrentados pelos bancos de dados legados incluem:</h3>
+                <ul>
+                    <li>Dificuldade de escalar rapidamente;</li>
+                    <li>Altos custos de manutenção;</li>
+                    <li>Falta de integração com soluções modernas em nuvem;</li>
+                    <li>Latência e falhas em aplicações críticas.</li>
+                </ul>
+                <h3>Vantagens das soluções em nuvem:</h3>
+                <ul>
+                    <li>Redução de custos;</li>
+                    <li>Aumento da performance;</li>
+                    <li>Alta segurança;</li>
+                    <li>Menor complexidade operacional.</li>
+                </ul>
+
+                <h2>Considerações antes de migrar para a nuvem</h2>
+                <p class="textos-tamanho-4a justificado">Embora os bancos de dados em nuvem tragam diversas vantagens, é importante estar ciente de algumas coisas:</p>
+                <ul>
+                    <li>Dependência do fornecedor;</li>
+                    <li>Desafios na integração com sistemas legados;</li>
+                    <li>Processos de migração complexos;</li>
+                    <li>Custo real pode variar com o uso;</li>
+                    <li>Risco de inatividade em casos de falhas de conexão;</li>
+                    <li>Preocupações com conformidade e segurança de dados.</li>
+                </ul>
+            </section>
+        </section>
+
+        <footer>
+            <section>
+                <span>Desenvolvido por</span>
+                <img src="../imgs/logo/info-logo.png" alt="Logo Info">
+            </section>
+        </footer>
+        <script>
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+
+            const dropdowns = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            const menusDropdown = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            menusDropdown.forEach(menu => {
+                menu.addEventListener('click', (evento) => {
+                    evento.preventDefault();
+                    const itemPai = menu.parentElement;
+                    itemPai.classList.toggle('aberto');
+                });
+            });
+
+            document.addEventListener('click', (evento) => {
+                menusDropdown.forEach(menu => {
+                    const itemPai = menu.parentElement;
+                    if (!itemPai.contains(evento.target)) {
+                        itemPai.classList.remove('aberto');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
