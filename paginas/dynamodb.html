@@ -7,158 +7,159 @@
     <link rel="stylesheet" href="../css/estilo-geral.css">
     <link rel="icon" type="image/png" href="../imgs/logo/info-logo-simbolo.png">
 </head>
-<body>
-    <header class="barranav" id="menu-navegacao">
-        <section class="barranav-parte">
-            <a href="../index.html"><img class="home-nav" src="../imgs/icons/home.svg" alt="Ícone Home"></a>
-            <img id="menu-mostrar" src="../imgs/icons/menu-hamburguer.svg" alt="Menu">
-            <nav>
-                <ul>
-                    <li><a href="computacao-nuvem.html">Computação em Nuvem</a></li>
-                    <li><a href="historia_aws.html">História da AWS</a></li>
-                    <li><a href="regioes.html">Zonas de Disponibilidade</a></li>
-                    <li class="dropdown">
-                        <a>Banco de Dados ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="banco-dados-nuvem.html">BD na Nuvem</a></li>
-                            <li><a href="aws-para-oracle.html">Oracle DB</a></li>
-                            <li><a href="cluster.html">Clusters</a></li>
-                            <li><a href="amazon_rds.html">Amazon RDS</a></li>
-                            <li><a href="aurora.html">Amazon Aurora</a></li>
-                            <li><a href="dynamodb.html">DynamoDB</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a>Infraestrutura ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="amazon-ec2.html">Amazon EC2</a></li>
-                            <li><a href="aws-para-oracle.html">ELB & Auto Scaling</a></li>
-                            <li><a href="amazon-vpc.html">Amazon VPC</a></li>
-                            <li><a href="cluster-pratica.html">Cluster na Prática</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a>Segurança ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="ima.html">IAM</a></li>
-                            <li><a href="cloudwatch.html">Cloudwatch</a></li>
-                            <li><a href="amazon-vpc.html">Amazon VPC</a></li>
-                            <li><a href="backup.html">Backup e Recuperação</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </section>
-        <a href="info.html"><img src="../imgs/logo/info-logo-s-texto.png" alt="Logo Info" class="nav-logo-info"></a>
-    </header>
-
-    <section class="conteudo conteudo-dynamodb">
-        <header class="cabecalho-dynamodb">  
-            <img class="logo-dynamodb" src="../imgs/logo/dynamodb.png">
-            <h1>Amazon DynamoDB</h1>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <section class="barranav-parte">
+                <a href="../index.html"><img class="home-nav" src="../imgs/icons/home.svg" alt="Ícone Home"></a>
+                <img id="menu-mostrar" src="../imgs/icons/menu-hamburguer.svg" alt="Menu">
+                <nav>
+                    <ul>
+                        <li><a href="./computacao-nuvem.html">Computação em Nuvem</a></li>
+                        <li><a href="./historia_aws.html">História da AWS</a></li>
+                        <li><a href="./regioes.html">Zonas de Disponibilidade</a></li>
+                        <li class="dropdown">
+                            <a>Banco de Dados ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./banco-dados-nuvem.html">BD na Nuvem</a></li>
+                                <li><a href="./aws-para-oracle.html">Oracle DB</a></li>
+                                <li><a href="./cluster.html">Clusters</a></li>
+                                <li><a href="./amazon_rds.html">Amazon RDS</a></li>
+                                <li><a href="./aurora.html">Amazon Aurora</a></li>
+                                <li><a href="./dynamodb.html">DynamoDB</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a>Infraestrutura ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./amazon-ec2.html">Amazon EC2</a></li>
+                                <li><a href="./amazon_vpc.html">Amazon VPC</a></li>
+                                <li><a href="./iam.html">IAM</a></li>
+                                <li><a href="./cloudwatch.html">Cloudwatch</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a>Outros ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./vantdevant.html">Vantagens e Desvantagens</a></li>
+                                <li><a href="./curiosidades.html">Curiosidades</a></li>
+                                <li><a href="./conclusao.html">Conclusao</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <a href="./info.html"><img src="../imgs/logo/info-logo-s-texto.png" alt="Logo Info" class="nav-logo-info"></a>
         </header>
-        <section id="visao" class="bloco-texto-50 justificado card-dynamodb">
-            <p class="textos-tamanho-1 margem-media">
-                O <strong>Amazon DynamoDB</strong> é um banco de dados NoSQL totalmente gerenciado pela AWS. Ele foi projetado para oferecer <em>alta disponibilidade</em>, <em>escalabilidade automática</em> e <em>baixa latência</em>, mesmo em aplicações que processam milhões de requisições por segundo.
-            </p>
-            <p class="textos-tamanho-1 margem-media">
-                Ao contrário de bancos de dados relacionais tradicionais, o DynamoDB trabalha com um modelo de dados flexível baseado em <strong>chave-valor</strong> e <strong>documentos</strong>. Isso torna o serviço ideal para cenários dinâmicos, em que a estrutura dos dados pode mudar ao longo do tempo sem a necessidade de migrações complexas.
-            </p>
-        </section>
-        <section id="modelagem" class="bloco-texto-50 justificado card-dynamodb destaque-dynamodb">
-            <h2 class="textos-tamanho-2 margem-media">Padrões de Modelagem</h2>
-            <p class="textos-tamanho-1 margem-media">
-                Os dados no DynamoDB são organizados em <strong>tabelas</strong>, compostas por <strong>itens</strong> (linhas) e <strong>atributos</strong> (colunas). Cada item possui uma chave primária que pode ser:
-            </p>
-            <ul class="lista-dynamodb">
-                <li><strong>Chave de partição</strong>: valor único que determina onde o item será armazenado.</li>
-                <li><strong>Chave de partição + chave de ordenação</strong>: permite criar conjuntos de dados hierárquicos e consultas mais flexíveis.</li>
-            </ul>
-            <p class="textos-tamanho-1 margem-media">
-                Além disso, é possível usar <strong>índices secundários</strong> (globais ou locais) para suportar diferentes padrões de acesso e consultas sem duplicar tabelas.
-            </p>
-        </section>
-        <section id="recursos" class="bloco-texto-50 justificado card-dynamodb">
-            <h2 class="textos-tamanho-2 margem-media">Recursos Avançados</h2>
-            <p class="textos-tamanho-1 margem-media">
-                O DynamoDB oferece um conjunto de recursos que tornam sua operação mais simples e segura:
-            </p>
-            <ul class="lista-dynamodb">
-                <li><strong>Escalabilidade automática</strong>: ajuste dinâmico da capacidade de leitura e escrita.</li>
-                <li><strong>Transações ACID</strong>: garantem consistência mesmo em operações críticas.</li>
-                <li><strong>Backup e recuperação</strong>: snapshots sob demanda e recuperação pontual (PITR).</li>
-                <li><strong>Tabelas globais</strong>: replicação multi-região com baixa latência.</li>
-                <li><strong>DynamoDB Streams</strong>: captura mudanças em tempo real para arquiteturas orientadas a eventos.</li>
-                <li><strong>DAX (DynamoDB Accelerator)</strong>: cache em memória que reduz latência de leitura para microssegundos.</li>
-            </ul>
-        </section>
-        <section id="casos" class="bloco-texto-50 justificado card-dynamodb">
-            <h2 class="textos-tamanho-2 margem-media">Casos de Uso</h2>
-            <p class="textos-tamanho-1 margem-media">
-                Graças à sua escalabilidade e baixa latência, o DynamoDB é amplamente utilizado em diferentes setores:
-            </p>
-            <ul class="lista-dynamodb">
-                <li><strong>Aplicações web e mobile</strong>: back-ends que exigem resposta em tempo real.</li>
-                <li><strong>Jogos online</strong>: rankings (leaderboards) e estados de sessão.</li>
-                <li><strong>E-commerce</strong>: carrinhos de compra e catálogos de produtos.</li>
-                <li><strong>IoT e streaming</strong>: coleta e análise de dados em tempo real.</li>
-                <li><strong>Microserviços</strong>: suporte a arquiteturas distribuídas altamente escaláveis.</li>
-            </ul>
-        </section>
-        <section id="seguranca" class="bloco-texto-50 justificado card-dynamodb">
-            <h2 class="textos-tamanho-2 margem-media">Segurança e Confiabilidade</h2>
-            <p class="textos-tamanho-1 margem-media">
-                O DynamoDB inclui recursos de segurança integrados, como:
-            </p>
-            <ul class="lista-dynamodb">
-                <li><strong>Criptografia em repouso</strong> e em trânsito.</li>
-                <li><strong>Controle de acesso granular</strong> com IAM.</li>
-                <li><strong>Auditoria</strong> via AWS CloudTrail.</li>
-                <li>Compliance com padrões como PCI DSS, HIPAA, SOC e ISO.</li>
-            </ul>
-            <p class="textos-tamanho-1 margem-media">
-                Com isso, empresas de setores críticos, como finanças, saúde e e-commerce, podem confiar no DynamoDB para armazenar dados sensíveis de forma segura.
-            </p>
-        </section>
-    </section>
 
-    <footer>
-        <section>
-            <span>Desenvolvido por</span>
-            <img src="../imgs/logo/info-logo.png" alt="Logo Info">
+        <section class="conteudo conteudo-dynamodb">
+            <header class="cabecalho-dynamodb">  
+                <img class="logo-dynamodb" src="../imgs/logo/dynamodb.png">
+                <h1>Amazon DynamoDB</h1>
+            </header>
+            <section id="visao" class="bloco-texto-50 justificado card-dynamodb">
+                <p class="textos-tamanho-1 margem-media">
+                    O <strong>Amazon DynamoDB</strong> é um banco de dados NoSQL totalmente gerenciado pela AWS. Ele foi projetado para oferecer <em>alta disponibilidade</em>, <em>escalabilidade automática</em> e <em>baixa latência</em>, mesmo em aplicações que processam milhões de requisições por segundo.
+                </p>
+                <p class="textos-tamanho-1 margem-media">
+                    Ao contrário de bancos de dados relacionais tradicionais, o DynamoDB trabalha com um modelo de dados flexível baseado em <strong>chave-valor</strong> e <strong>documentos</strong>. Isso torna o serviço ideal para cenários dinâmicos, em que a estrutura dos dados pode mudar ao longo do tempo sem a necessidade de migrações complexas.
+                </p>
+            </section>
+            <section id="modelagem" class="bloco-texto-50 justificado card-dynamodb destaque-dynamodb">
+                <h2 class="textos-tamanho-2 margem-media">Padrões de Modelagem</h2>
+                <p class="textos-tamanho-1 margem-media">
+                    Os dados no DynamoDB são organizados em <strong>tabelas</strong>, compostas por <strong>itens</strong> (linhas) e <strong>atributos</strong> (colunas). Cada item possui uma chave primária que pode ser:
+                </p>
+                <ul class="lista-dynamodb">
+                    <li><strong>Chave de partição</strong>: valor único que determina onde o item será armazenado.</li>
+                    <li><strong>Chave de partição + chave de ordenação</strong>: permite criar conjuntos de dados hierárquicos e consultas mais flexíveis.</li>
+                </ul>
+                <p class="textos-tamanho-1 margem-media">
+                    Além disso, é possível usar <strong>índices secundários</strong> (globais ou locais) para suportar diferentes padrões de acesso e consultas sem duplicar tabelas.
+                </p>
+            </section>
+            <section id="recursos" class="bloco-texto-50 justificado card-dynamodb">
+                <h2 class="textos-tamanho-2 margem-media">Recursos Avançados</h2>
+                <p class="textos-tamanho-1 margem-media">
+                    O DynamoDB oferece um conjunto de recursos que tornam sua operação mais simples e segura:
+                </p>
+                <ul class="lista-dynamodb">
+                    <li><strong>Escalabilidade automática</strong>: ajuste dinâmico da capacidade de leitura e escrita.</li>
+                    <li><strong>Transações ACID</strong>: garantem consistência mesmo em operações críticas.</li>
+                    <li><strong>Backup e recuperação</strong>: snapshots sob demanda e recuperação pontual (PITR).</li>
+                    <li><strong>Tabelas globais</strong>: replicação multi-região com baixa latência.</li>
+                    <li><strong>DynamoDB Streams</strong>: captura mudanças em tempo real para arquiteturas orientadas a eventos.</li>
+                    <li><strong>DAX (DynamoDB Accelerator)</strong>: cache em memória que reduz latência de leitura para microssegundos.</li>
+                </ul>
+            </section>
+            <section id="casos" class="bloco-texto-50 justificado card-dynamodb">
+                <h2 class="textos-tamanho-2 margem-media">Casos de Uso</h2>
+                <p class="textos-tamanho-1 margem-media">
+                    Graças à sua escalabilidade e baixa latência, o DynamoDB é amplamente utilizado em diferentes setores:
+                </p>
+                <ul class="lista-dynamodb">
+                    <li><strong>Aplicações web e mobile</strong>: back-ends que exigem resposta em tempo real.</li>
+                    <li><strong>Jogos online</strong>: rankings (leaderboards) e estados de sessão.</li>
+                    <li><strong>E-commerce</strong>: carrinhos de compra e catálogos de produtos.</li>
+                    <li><strong>IoT e streaming</strong>: coleta e análise de dados em tempo real.</li>
+                    <li><strong>Microserviços</strong>: suporte a arquiteturas distribuídas altamente escaláveis.</li>
+                </ul>
+            </section>
+            <section id="seguranca" class="bloco-texto-50 justificado card-dynamodb">
+                <h2 class="textos-tamanho-2 margem-media">Segurança e Confiabilidade</h2>
+                <p class="textos-tamanho-1 margem-media">
+                    O DynamoDB inclui recursos de segurança integrados, como:
+                </p>
+                <ul class="lista-dynamodb">
+                    <li><strong>Criptografia em repouso</strong> e em trânsito.</li>
+                    <li><strong>Controle de acesso granular</strong> com IAM.</li>
+                    <li><strong>Auditoria</strong> via AWS CloudTrail.</li>
+                    <li>Compliance com padrões como PCI DSS, HIPAA, SOC e ISO.</li>
+                </ul>
+                <p class="textos-tamanho-1 margem-media">
+                    Com isso, empresas de setores críticos, como finanças, saúde e e-commerce, podem confiar no DynamoDB para armazenar dados sensíveis de forma segura.
+                </p>
+            </section>
         </section>
-    </footer>
-    <script>
-        const menuNav = document.querySelector('.barranav');
-        const menuMostrar = document.getElementById('menu-mostrar');
-        menuMostrar.addEventListener('click', (e) => {
-            e.stopPropagation();
-            menuNav.classList.toggle('open');
-        });
-        document.addEventListener('click', (e) => {
-            if (!menuNav.contains(e.target)) {
-                menuNav.classList.remove('open');
-            }
-        });
-
-        const dropdowns = document.querySelectorAll('.barranav nav ul li.dropdown > a');
-        const menusDropdown = document.querySelectorAll('.barranav nav ul li.dropdown > a');
-        menusDropdown.forEach(menu => {
-            menu.addEventListener('click', (evento) => {
-                evento.preventDefault();
-                const itemPai = menu.parentElement;
-                itemPai.classList.toggle('aberto');
+        <footer>
+            <section>
+                <span>Desenvolvido por</span>
+                <img src="../imgs/logo/info-logo.png" alt="Logo Info">
+            </section>
+            <section>
+                <span><a href="./referencias.html">Referências</a></span>
+            </section>
+        </footer>
+        <script>
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
             });
-        });
-
-        document.addEventListener('click', (evento) => {
-            menusDropdown.forEach(menu => {
-                const itemPai = menu.parentElement;
-                if (!itemPai.contains(evento.target)) {
-                    itemPai.classList.remove('aberto');
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
                 }
             });
-        });
-    </script>
-</body>
+
+            const dropdowns = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            const menusDropdown = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            menusDropdown.forEach(menu => {
+                menu.addEventListener('click', (evento) => {
+                    evento.preventDefault();
+                    const itemPai = menu.parentElement;
+                    itemPai.classList.toggle('aberto');
+                });
+            });
+
+            document.addEventListener('click', (evento) => {
+                menusDropdown.forEach(menu => {
+                    const itemPai = menu.parentElement;
+                    if (!itemPai.contains(evento.target)) {
+                        itemPai.classList.remove('aberto');
+                    }
+                });
+            });
+        </script>
+    </body>
 </html>

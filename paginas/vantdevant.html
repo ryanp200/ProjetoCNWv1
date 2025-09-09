@@ -8,16 +8,46 @@
     </head>
     <body>
         <header class="barranav" id="menu-navegacao">
-            <span id="menu-mostrar">&#9776; Menu</span>
-            <nav>
-                <ul>
-                    <li><a href="">pg1</a></li>
-                    <li><a href="">pg2</a></li>
-                    <li><a href="">pg3</a></li>
-                    <li><a href="">pg4</a></li>
-                    <li><a href="Vantagens_E_Desvantagens.html">pg18</a></li>
-                </ul>
-            </nav>
+            <section class="barranav-parte">
+                <a href="../index.html"><img class="home-nav" src="../imgs/icons/home.svg" alt="Ícone Home"></a>
+                <img id="menu-mostrar" src="../imgs/icons/menu-hamburguer.svg" alt="Menu">
+                <nav>
+                    <ul>
+                        <li><a href="./computacao-nuvem.html">Computação em Nuvem</a></li>
+                        <li><a href="./historia_aws.html">História da AWS</a></li>
+                        <li><a href="./regioes.html">Zonas de Disponibilidade</a></li>
+                        <li class="dropdown">
+                            <a>Banco de Dados ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./banco-dados-nuvem.html">BD na Nuvem</a></li>
+                                <li><a href="./aws-para-oracle.html">Oracle DB</a></li>
+                                <li><a href="./cluster.html">Clusters</a></li>
+                                <li><a href="./amazon_rds.html">Amazon RDS</a></li>
+                                <li><a href="./aurora.html">Amazon Aurora</a></li>
+                                <li><a href="./dynamodb.html">DynamoDB</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a>Infraestrutura ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./amazon-ec2.html">Amazon EC2</a></li>
+                                <li><a href="./amazon_vpc.html">Amazon VPC</a></li>
+                                <li><a href="./iam.html">IAM</a></li>
+                                <li><a href="./cloudwatch.html">Cloudwatch</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a>Outros ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./vantdevant.html">Vantagens e Desvantagens</a></li>
+                                <li><a href="./curiosidades.html">Curiosidades</a></li>
+                                <li><a href="./conclusao.html">Conclusao</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <a href="./info.html"><img src="../imgs/logo/info-logo-s-texto.png" alt="Logo Info" class="nav-logo-info"></a>
         </header>
         <section class="conteudo">
             <section>
@@ -25,24 +55,20 @@
             </section>
             <section class="meio">
                 <section class="bloco-texto-75 justificado">
-
-<h1 class="direita-alinhado">Vantagens</h1>
+                    <h1 class="direita-alinhado">Vantagens</h1>
                     <p class="textos-tamanho-1 margem-grande identado">Usar a AWS traz como vantagem principal a flexibilidade e a escalabilidade. Você pode começar com recursos básicos e ir aumentando conforme a demanda cresce, sem precisar investir em infraestrutura física. A variedade de serviços também é muito ampla, atendendo desde hospedagem de sites até inteligência artificial, big data e IoT, o que facilita a integração de diferentes soluções em um só ambiente.
                     <p class="textos-tamanho-1 margem-grande identado">Além disso, a infraestrutura da Amazon é bastante confiável, distribuída globalmente e com altos níveis de segurança, o que garante estabilidade e confiança para empresas de diversos portes.
-    <img src="img/Aws_Vantagens.jpg" id="logo-vantagem" alt="Vantagem">
                 </section>
                     </p>
                    
                    
                 </section>
             </section>
-  <section class="meio">
+            <section class="meio">
                 <section class="bloco-texto-75 justificado">
-
-<h1 class="direita-alinhado">Desvantagens</h1>
+                    <h1 class="direita-alinhado">Desvantagens</h1>
                     <p class="textos-tamanho-1 margem-grande identado">Por outro lado, existem desvantagens. O custo pode se tornar alto se não houver um bom gerenciamento dos recursos, já que o modelo é pay as you go e pequenos descuidos podem gerar faturas elevadas. A curva de aprendizado também é significativa, porque a plataforma tem muitos serviços, configurações e políticas de segurança que exigem conhecimento técnico.
                     <p class="textos-tamanho-1 margem-grande identado">Outro ponto é a dependência de um único provedor: ao concentrar toda a infraestrutura na AWS, a empresa fica sujeita a variações de preços, mudanças nas regras de uso e eventuais falhas regionais da própria Amazon.
-    <img src="img/Aws_Desvantagens.jpeg" id="logo-vantagem" alt="Vantagem">
                 </section>
                     </p>
                    
@@ -54,6 +80,9 @@
             <section>
                 <span>Desenvolvido por</span>
                 <img src="../imgs/logo/info-logo.png" alt="Logo Info">
+            </section>
+            <section>
+                <span><a href="./referencias.html">Referências</a></span>
             </section>
         </footer>
         <script>
