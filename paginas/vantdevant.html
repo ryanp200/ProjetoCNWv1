@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Vantagens e Desvantagens </title>
+        <link rel="stylesheet" href="../css/estilo-geral.css">
+    </head>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <span id="menu-mostrar">&#9776; Menu</span>
+            <nav>
+                <ul>
+                    <li><a href="">pg1</a></li>
+                    <li><a href="">pg2</a></li>
+                    <li><a href="">pg3</a></li>
+                    <li><a href="">pg4</a></li>
+                    <li><a href="Vantagens_E_Desvantagens.html">pg18</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="conteudo">
+            <section>
+            <h1 class="centralizado-alinhado"> Vantagens e Desvantagens</h1>
+            </section>
+            <section class="meio">
+                <section class="bloco-texto-75 justificado">
+
+<h1 class="direita-alinhado">Vantagens</h1>
+                    <p class="textos-tamanho-1 margem-grande identado">Usar a AWS traz como vantagem principal a flexibilidade e a escalabilidade. Você pode começar com recursos básicos e ir aumentando conforme a demanda cresce, sem precisar investir em infraestrutura física. A variedade de serviços também é muito ampla, atendendo desde hospedagem de sites até inteligência artificial, big data e IoT, o que facilita a integração de diferentes soluções em um só ambiente.
+                    <p class="textos-tamanho-1 margem-grande identado">Além disso, a infraestrutura da Amazon é bastante confiável, distribuída globalmente e com altos níveis de segurança, o que garante estabilidade e confiança para empresas de diversos portes.
+    <img src="img/Aws_Vantagens.jpg" id="logo-vantagem" alt="Vantagem">
+                </section>
+                    </p>
+                   
+                   
+                </section>
+            </section>
+  <section class="meio">
+                <section class="bloco-texto-75 justificado">
+
+<h1 class="direita-alinhado">Desvantagens</h1>
+                    <p class="textos-tamanho-1 margem-grande identado">Por outro lado, existem desvantagens. O custo pode se tornar alto se não houver um bom gerenciamento dos recursos, já que o modelo é pay as you go e pequenos descuidos podem gerar faturas elevadas. A curva de aprendizado também é significativa, porque a plataforma tem muitos serviços, configurações e políticas de segurança que exigem conhecimento técnico.
+                    <p class="textos-tamanho-1 margem-grande identado">Outro ponto é a dependência de um único provedor: ao concentrar toda a infraestrutura na AWS, a empresa fica sujeita a variações de preços, mudanças nas regras de uso e eventuais falhas regionais da própria Amazon.
+    <img src="img/Aws_Desvantagens.jpeg" id="logo-vantagem" alt="Vantagem">
+                </section>
+                    </p>
+                   
+                   
+                </section>
+            </section>
+        </section>
+        <footer>
+            <section>
+                <span>Desenvolvido por</span>
+                <img src="../imgs/logo/info-logo.png" alt="Logo Info">
+            </section>
+        </footer>
+        <script>
+
+            const dropdowns = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            const menusDropdown = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            menusDropdown.forEach(menu => {
+                menu.addEventListener('click', (evento) => {
+                    evento.preventDefault();
+                    const itemPai = menu.parentElement;
+                    itemPai.classList.toggle('aberto');
+                });
+            });
+
+            document.addEventListener('click', (evento) => {
+                menusDropdown.forEach(menu => {
+                    const itemPai = menu.parentElement;
+                    if (!itemPai.contains(evento.target)) {
+                        itemPai.classList.remove('aberto');
+                    }
+                });
+            });
+
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+        </script>
+       
+    </body>
+</html>

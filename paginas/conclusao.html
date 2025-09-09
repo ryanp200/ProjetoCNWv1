@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> conclusão </title>
+        <link rel="stylesheet" href="../css/estilo-geral.css">
+    </head>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <span id="menu-mostrar">&#9776; Menu</span>
+            <nav>
+                <ul>
+                    <li><a href="">pg1</a></li>
+                    <li><a href="">pg2</a></li>
+                    <li><a href="">pg3</a></li>
+                    <li><a href="">pg4</a></li>
+                    <li><a href="Conclusão.html">pg19</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="conteudo">
+            <section>
+            <h1 class="centralizado-alinhado"> Conclusão</h1>
+            </section>
+            <section class="meio">
+                <section class="bloco-texto-75 justificado">
+                    
+    <img class ="meio" src="img/Emoji.gif" id="logo-emoji" alt="emoji">
+
+                    <p class="textos-tamanho-1 margem-grande identado">A AWS é tão importante porque representa muito mais do que apenas uma provedora de serviços de nuvem: ela revolucionou a forma como empresas, governos e pessoas lidam com tecnologia. Sua relevância está na combinação de escalabilidade, flexibilidade e inovação, permitindo que desde pequenas startups até grandes corporações tenham acesso a uma infraestrutura robusta sem precisar investir em hardware caro. 
+<p class="textos-tamanho-1 margem-grande identado"> Além disso, a AWS impulsiona a transformação digital, viabilizando soluções de inteligência artificial, análise de dados, segurança e automação, que hoje são pilares de qualquer negócio competitivo. 
+<p class="textos-tamanho-1 margem-grande identado"> Em resumo, a importância da AWS está no fato de democratizar o acesso à tecnologia de ponta, acelerar inovações e oferecer a base necessária para que organizações do mundo todo possam crescer de forma ágil, segura e sustentável.
+
+                   
+                </section>
+                    </p>
+                   
+                   
+                </section>
+            </section>
+
+                </section>
+            </section>
+        </section>
+        <footer>
+            <section>
+                <span>Desenvolvido por</span>
+                <img src="../imgs/logo/info-logo.png" alt="Logo Info">
+            </section>
+        </footer>
+        <script>
+            const dropdowns = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            const menusDropdown = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            menusDropdown.forEach(menu => {
+                menu.addEventListener('click', (evento) => {
+                    evento.preventDefault();
+                    const itemPai = menu.parentElement;
+                    itemPai.classList.toggle('aberto');
+                });
+            });
+
+            document.addEventListener('click', (evento) => {
+                menusDropdown.forEach(menu => {
+                    const itemPai = menu.parentElement;
+                    if (!itemPai.contains(evento.target)) {
+                        itemPai.classList.remove('aberto');
+                    }
+                });
+            });
+
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+
+
+const imagem = document.getElementById("logo-emoji");
+
+    imagem.addEventListener("mouseover", () => {
+      imagem.classList.add("animacao-pulsar");
+    });
+
+    imagem.addEventListener("mouseout", () => {
+      imagem.classList.remove("animacao-pulsar");
+    });
+
+        </script>
+       
+    </body>
+</html>
