@@ -648,6 +648,25 @@ p{
     font-size: 40px;
 }
 
+#username_iam{
+      padding: 12px 15px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+#amazon_vpc{
+     width: 50%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    display: flex;
+    justify-self: center;
+}
+
 #lista-referencias a:hover {
     color: #fff;
 }
