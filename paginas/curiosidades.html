@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Curiosidades </title>
+        <link rel="stylesheet" href="../css/estilo-geral.css">
+    </head>
+    <body>
+        <header class="barranav" id="menu-navegacao">
+            <span id="menu-mostrar">&#9776; Menu</span>
+            <nav>
+                <ul>
+                    <li><a href="">pg1</a></li>
+                    <li><a href="">pg2</a></li>
+                    <li><a href="">pg3</a></li>
+                    <li><a href="">pg4</a></li>
+                    <li><a href="Curiosidades.html">pg17</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="conteudo">
+            <section>
+            <h1 class="direita-alinhado"> Curiosidades interessantes</h1>
+            </section>
+            <section class="meio">
+                <section class="bloco-texto-75 justificado">
+                    
+    <img class ="meio"src="img/Duvida.png" id="logo-duvida" alt="Duvida">
+
+                    <p class="textos-tamanho-1 margem-grande identado">A AWS é uma das maiores compradoras de energia renovável do planeta. Ela investe em parques eólicos e solares para alimentar seus data centers.
+                    <p class="textos-tamanho-1 margem-grande identado">Além disso, estima-se que a AWS tenha mais poder de computação do que os próximos dez maiores provedores de nuvem juntos em alguns segmentos.
+
+<p class="textos-tamanho-1 margem-grande identado">Hoje, a AWS tem data centers espalhados em dezenas de regiões do mundo, chamados de Availability Zones. A ideia é garantir baixa latência e alta disponibilidade.
+
+    <img class="meio" src="img/EnergiaSolar.jpeg" id="logo-energiasolar" alt="Solar">
+                </section>
+                    </p>
+                   
+                   
+                </section>
+            </section>
+
+                </section>
+            </section>
+        </section>
+        <footer>
+            <section>
+                <span>Desenvolvido por</span>
+                <img src="../imgs/logo/info-logo.png" alt="Logo Info">
+            </section>
+        </footer>
+        <script>
+            const menuNav = document.querySelector('.barranav');
+            const menuMostrar = document.getElementById('menu-mostrar');
+            menuMostrar.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuNav.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!menuNav.contains(e.target)) {
+                    menuNav.classList.remove('open');
+                }
+            });
+
+
+const imagem = document.getElementById("logo-duvida");
+
+    imagem.addEventListener("mouseover", () => {
+      imagem.classList.add("animacao-pulsar");
+    });
+
+    imagem.addEventListener("mouseout", () => {
+      imagem.classList.remove("animacao-pulsar");
+    });
+
+const imagem2 = document.getElementById("logo-energiasolar");
+
+    imagem2.addEventListener("mouseover", () => {
+      imagem2.classList.add("animacao-pulsar");
+    });
+
+    imagem2.addEventListener("mouseout", () => {
+      imagem2.classList.remove("animacao-pulsar");
+    });
+
+            const dropdowns = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            const menusDropdown = document.querySelectorAll('.barranav nav ul li.dropdown > a');
+            menusDropdown.forEach(menu => {
+                menu.addEventListener('click', (evento) => {
+                    evento.preventDefault();
+                    const itemPai = menu.parentElement;
+                    itemPai.classList.toggle('aberto');
+                });
+            });
+
+            document.addEventListener('click', (evento) => {
+                menusDropdown.forEach(menu => {
+                    const itemPai = menu.parentElement;
+                    if (!itemPai.contains(evento.target)) {
+                        itemPai.classList.remove('aberto');
+                    }
+                });
+            });
+        </script>
+       
+    </body>
+</html>
