@@ -734,3 +734,21 @@ p{
 .lista-dynamodb li:hover {
     background: rgba(255,255,255,0.1);
 }
+
+
+#logo-energiasolar{
+    width: 1000px;
+    height: 450px;
+}
+
+#logo-duvida{
+    width: 200px;
+    height: 180px;
+    justify-self: center;
+}
+
+#logo-emoji-conclusao{
+    width: 200px;
+    height: 180px;
+    justify-self: center;
+}
