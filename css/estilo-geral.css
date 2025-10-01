@@ -143,7 +143,7 @@ body {
     padding: 10px 20px;
     display: block;
     font-size: 0.95em;
-    color: #fff;
+    color: #e27676;
     text-decoration: none;
 }
 
@@ -768,4 +768,10 @@ dd {
     font-size: 20px;
     text-align: justify;
     margin-bottom: 16px;
+}
+/*Lista não ordenada*/
+.nao_ordenada {
+    margin-left: 25px;
+    margin-top: 5px;
+    line-height: 25px;
 }
